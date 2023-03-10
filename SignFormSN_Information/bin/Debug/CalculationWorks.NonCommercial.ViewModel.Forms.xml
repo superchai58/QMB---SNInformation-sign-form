@@ -1,0 +1,1904 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>CalculationWorks.NonCommercial.ViewModel.Forms</name>
+    </assembly>
+    <members>
+        <member name="T:CalculationWorks.NonCommercial.ViewModel.Forms.BcfCodedPropertyDescriptor">
+            <summary>
+            Infrastructure. The type supports the infrastructure and is not intended to be used directly from your code. This class cannot be inherited.
+            </summary>
+        </member>
+        <member name="M:CalculationWorks.NonCommercial.ViewModel.Forms.BcfCodedPropertyDescriptor.CanResetValue(System.Object)">
+            <summary>
+            When overridden in a derived class, returns whether resetting an object changes its value.
+            </summary>
+            <param name="component">The component to test for reset capability. </param>
+            <returns><c>true</c>  if resetting the component changes its value; otherwise, <c>false</c>.</returns>
+        </member>
+        <member name="M:CalculationWorks.NonCommercial.ViewModel.Forms.BcfCodedPropertyDescriptor.GetValue(System.Object)">
+            <summary>
+            When overridden in a derived class, gets the current value of the property on a component. 
+            </summary>
+            <param name="component">The component with the property for which to retrieve the value. </param>
+            <returns>The value of a property for a given component.</returns>
+        </member>
+        <member name="M:CalculationWorks.NonCommercial.ViewModel.Forms.BcfCodedPropertyDescriptor.ResetValue(System.Object)">
+            <summary>
+            When overridden in a derived class, resets the value for this property of the component to the default value. 
+            </summary>
+            <param name="component">The component with the property value that is to be reset to the default value. </param>
+        </member>
+        <member name="M:CalculationWorks.NonCommercial.ViewModel.Forms.BcfCodedPropertyDescriptor.SetValue(System.Object,System.Object)">
+            <summary>
+            When overridden in a derived class, sets the value of the component to a different value. 
+            </summary>
+            <param name="component">The component with the property value that is to be set. </param>
+            <param name="value">The new value. </param>
+        </member>
+        <member name="M:CalculationWorks.NonCommercial.ViewModel.Forms.BcfCodedPropertyDescriptor.ShouldSerializeValue(System.Object)">
+            <summary>
+            When overridden in a derived class, determines a value indicating whether the value of this property needs to be persisted. 
+            </summary>
+            <param name="component">The component with the property to be examined for persistence. </param>
+            <returns><c>true</c>  if the property should be persisted; otherwise, <c>false</c>.</returns>
+        </member>
+        <member name="P:CalculationWorks.NonCommercial.ViewModel.Forms.BcfCodedPropertyDescriptor.InnerPropertyDescriptor">
+            <summary>
+            Gets the inner property descriptor.
+            </summary>
+            <value>The inner property descriptor.</value>
+        </member>
+        <member name="P:CalculationWorks.NonCommercial.ViewModel.Forms.BcfCodedPropertyDescriptor.ComponentType">
+            <summary>
+            When overridden in a derived class, gets the type of the component this property is bound to.
+            </summary>
+            <value>The type of the component.</value>
+            <returns>A <see cref="T:System.Type" /> that represents the type of component this property is bound to. When the <see cref="M:System.ComponentModel.PropertyDescriptor.GetValue(System.Object)" /> or <see cref="M:System.ComponentModel.PropertyDescriptor.SetValue(System.Object,System.Object)" /> methods are invoked, the object specified might be an instance of this type. </returns>
+        </member>
+        <member name="P:CalculationWorks.NonCommercial.ViewModel.Forms.BcfCodedPropertyDescriptor.IsReadOnly">
+            <summary>
+            When overridden in a derived class, gets a value indicating whether this property is read-only. 
+            </summary>
+            <value><c>true</c> if this instance is read only; otherwise, <c>false</c>.</value>
+            <returns><c>true</c> if this instance is read only; otherwise, <c>false</c>.</returns>
+        </member>
+        <member name="P:CalculationWorks.NonCommercial.ViewModel.Forms.BcfCodedPropertyDescriptor.PropertyType">
+            <summary>
+            When overridden in a derived class, gets the type of the property. 
+            </summary>
+            <value>The type of the property.</value>
+            <returns>A <see cref="T:System.Type" /> that represents the type of the property.</returns>
+        </member>
+        <member name="T:CalculationWorks.NonCommercial.ViewModel.Forms.BcfBindingSource">
+            <summary>
+            Represents a hierarchical bindable component.
+            </summary>
+            <remarks>
+            <para>Instances will be created by <see cref="M:CalculationWorks.NonCommercial.ViewModel.Forms.BcfHierarchicalViewManager.AddRootBindingSource``1(System.String,System.String,System.Func{CalculationWorks.NonCommercial.ViewModel.Forms.BcfBindingSourceBuilder,``0})"/> and <see cref="M:CalculationWorks.NonCommercial.ViewModel.Forms.BcfHierarchicalViewManager.AddBranchBindingSource``1(System.String,CalculationWorks.NonCommercial.ViewModel.Forms.BcfBindingSource,System.String,System.Func{CalculationWorks.NonCommercial.ViewModel.Forms.BcfBindingSourceBuilder,``0})"/>.</para>
+            </remarks>
+        </member>
+        <member name="M:CalculationWorks.NonCommercial.ViewModel.Forms.BcfBindingSource.#ctor(CalculationWorks.NonCommercial.ViewModel.Forms.BcfBindingSourceBuilder)">
+            <summary>
+            Initializes a new instance of the <see cref="T:CalculationWorks.NonCommercial.ViewModel.Forms.BcfBindingSource"/> class.
+            </summary>
+            <param name="builder">The builder.</param>
+        </member>
+        <member name="M:CalculationWorks.NonCommercial.ViewModel.Forms.BcfBindingSource.OnNavigated(CalculationWorks.NonCommercial.ViewModel.Forms.BcfViewManagerNavigatedEventArgs)">
+            <summary>
+            Raises the <see cref="E:CalculationWorks.NonCommercial.ViewModel.Forms.BcfBindingSource.Navigated"/> event.
+            </summary>
+            <param name="e">The <see cref="T:CalculationWorks.NonCommercial.ViewModel.Forms.BcfViewManagerNavigatedEventArgs"/> instance containing the event data.</param>
+        </member>
+        <member name="M:CalculationWorks.NonCommercial.ViewModel.Forms.BcfBindingSource.GetDefaultActiveRowView">
+            <summary>
+            Gets the default active row view.
+            </summary>
+            <returns>The default active row view; or <c>null</c> to use first or row view if present.</returns>
+            <remarks>
+            <para>Override this method to return a persisted previous active row.</para>
+            <para>When returning other value then <c>null</c> <see cref="T:CalculationWorks.NonCommercial.ViewModel.Forms.BcfBindingSource"/> will check if it is in list. If not first row view will be used as default if present.</para>
+            </remarks>
+        </member>
+        <member name="M:CalculationWorks.NonCommercial.ViewModel.Forms.BcfBindingSource.ToString">
+            <summary>
+            Returns the name.
+            </summary>
+            <returns>The name</returns>
+        </member>
+        <member name="M:CalculationWorks.NonCommercial.ViewModel.Forms.BcfBindingSource.Dispose">
+            <summary>
+            Performs application-defined tasks associated with freeing, releasing, or resetting unmanaged resources. 
+            </summary>
+        </member>
+        <member name="M:CalculationWorks.NonCommercial.ViewModel.Forms.BcfBindingSource.Dispose(System.Boolean)">
+            <summary>
+            Releases unmanaged and - optionally - managed resources.
+            </summary>
+            <param name="disposing"><c>true</c> to release both managed and unmanaged resources; <c>false</c> to release only unmanaged resources.</param>
+        </member>
+        <member name="M:CalculationWorks.NonCommercial.ViewModel.Forms.BcfBindingSource.GetNavigationState">
+            <summary>
+            Gets the state of the navigation.
+            </summary>
+            <returns>BcfNavigationState.</returns>
+        </member>
+        <member name="M:CalculationWorks.NonCommercial.ViewModel.Forms.BcfBindingSource.NavigateTo(CalculationWorks.NonCommercial.BusinessModel.BcfRow)">
+            <summary>
+            Navigates to the specified row.
+            </summary>
+            <param name="destinationRow">The destination row.</param>
+            <returns><c>true</c> if <see cref="P:CalculationWorks.NonCommercial.ViewModel.Forms.BcfBindingSource.CurrentRow"/> is set to destinationRow, <c>false</c> otherwise.</returns>
+            <exception cref="T:System.ArgumentNullException">destinationRow</exception>
+            <exception cref="T:System.ArgumentException">destinationRow is not valid</exception>
+            <exception cref="T:System.ArgumentException">destinationRow does not belongs to this table</exception>
+        </member>
+        <member name="P:CalculationWorks.NonCommercial.ViewModel.Forms.BcfBindingSource.Name">
+            <summary>
+            Gets the name.
+            </summary>
+            <value>The name.</value>
+        </member>
+        <member name="P:CalculationWorks.NonCommercial.ViewModel.Forms.BcfBindingSource.CurrentTableView">
+            <summary>
+            Gets the current table view.
+            </summary>
+            <value>The current table view.</value>
+        </member>
+        <member name="P:CalculationWorks.NonCommercial.ViewModel.Forms.BcfBindingSource.CurrentRowView">
+            <summary>
+            Gets or sets the current row view.
+            </summary>
+            <value>The current row view.</value>
+        </member>
+        <member name="E:CalculationWorks.NonCommercial.ViewModel.Forms.BcfBindingSource.Navigated">
+            <summary>
+            Occurs when <see cref="P:CalculationWorks.NonCommercial.ViewModel.Forms.BcfBindingSource.CurrentRowView"/> property was set to an other object.
+            </summary>
+        </member>
+        <member name="P:CalculationWorks.NonCommercial.ViewModel.Forms.BcfBindingSource.CurrentRow">
+            <summary>
+            Gets the current BcfRow.
+            </summary>
+            <value>The current row.</value>
+        </member>
+        <member name="P:CalculationWorks.NonCommercial.ViewModel.Forms.BcfBindingSource.List">
+            <summary>
+            Gets the list.
+            </summary>
+            <value>The list.</value>
+        </member>
+        <member name="P:CalculationWorks.NonCommercial.ViewModel.Forms.BcfBindingSource.ViewManager">
+            <summary>
+            Gets the BcfHierarchicalViewManager this BcfBindingSource belongs to.
+            </summary>
+            <value>The view manager.</value>
+        </member>
+        <member name="P:CalculationWorks.NonCommercial.ViewModel.Forms.BcfBindingSource.ParentBindingSource">
+            <summary>
+            Gets the parent BcfBindingSource this BcfBindingSource belongs to.
+            </summary>
+            <value>The parent BcfBindingSource or <c>null</c> if this is a root bindingsource</value>
+        </member>
+        <member name="P:CalculationWorks.NonCommercial.ViewModel.Forms.BcfBindingSource.Table">
+            <summary>
+            Gets the BcfTable the view bases on to.
+            </summary>
+            <value>The table.</value>
+        </member>
+        <member name="P:CalculationWorks.NonCommercial.ViewModel.Forms.BcfBindingSource.Relation">
+            <summary>
+            Gets the relation.
+            </summary>
+            <value>The relation to parent BcfBindingSource if this is an branch binding source; else <c>null</c>.</value>
+        </member>
+        <member name="P:CalculationWorks.NonCommercial.ViewModel.Forms.BcfBindingSource.CurrencyManager">
+            <summary>
+            Gets the CurrencyManager.
+            </summary>
+            <value>The currency manager.</value>
+        </member>
+        <member name="P:CalculationWorks.NonCommercial.ViewModel.Forms.BcfBindingSource.IsDisposed">
+            <summary>
+            Gets a value indicating whether this instance is disposed.
+            </summary>
+            <value><c>true</c> if this instance is disposed; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="P:CalculationWorks.NonCommercial.ViewModel.Forms.BcfBindingSource.ChildBindingSources">
+            <summary>
+            Gets the child binding sources.
+            </summary>
+            <value>The child binding sources.</value>
+        </member>
+        <member name="E:CalculationWorks.NonCommercial.ViewModel.Forms.BcfBindingSource.Disposed">
+            <summary>
+            Represents the method that handles the <see cref="E:System.ComponentModel.IComponent.Disposed"/> event of a component.
+            </summary>
+        </member>
+        <member name="T:CalculationWorks.NonCommercial.ViewModel.Forms.BcfBindingSourceBuilder">
+            <summary>
+            Infrastructure. The BcfBindingSourceBuilder type supports the infrastructure and is not intended to be used directly from your code. This class cannot be inherited.
+            </summary>
+        </member>
+        <member name="P:CalculationWorks.NonCommercial.ViewModel.Forms.BcfBindingSourceBuilder.ViewManager">
+            <summary>
+            Gets the view manager.
+            </summary>
+            <value>The view manager.</value>
+        </member>
+        <member name="P:CalculationWorks.NonCommercial.ViewModel.Forms.BcfBindingSourceBuilder.DataMember">
+            <summary>
+            Gets the data member.
+            </summary>
+            <value>The data member.</value>
+        </member>
+        <member name="P:CalculationWorks.NonCommercial.ViewModel.Forms.BcfBindingSourceBuilder.ParentBindingSource">
+            <summary>
+            Gets the parent binding source.
+            </summary>
+            <value>The parent binding source.</value>
+        </member>
+        <member name="T:CalculationWorks.NonCommercial.ViewModel.Forms.BcfBindingSourceCollection">
+            <summary>
+            Represents the collection of BcfBindingSource objects. This class cannot be inherited.
+            </summary>
+        </member>
+        <member name="T:CalculationWorks.NonCommercial.ViewModel.Forms.BcfBindingSourcePropertyDescriptor">
+            <summary>
+            Infrastructure. The type supports the infrastructure and is not intended to be used directly from your code. This class cannot be inherited.
+            </summary>
+        </member>
+        <member name="M:CalculationWorks.NonCommercial.ViewModel.Forms.BcfBindingSourcePropertyDescriptor.CanResetValue(System.Object)">
+            <summary>
+            When overridden in a derived class, returns whether resetting an object changes its value.
+            </summary>
+            <param name="component">The component to test for reset capability. </param>
+            <returns><c>true</c>  if resetting the component changes its value; otherwise, <c>false</c>.</returns>
+        </member>
+        <member name="M:CalculationWorks.NonCommercial.ViewModel.Forms.BcfBindingSourcePropertyDescriptor.GetValue(System.Object)">
+            <summary>
+            When overridden in a derived class, gets the current value of the property on a component. 
+            </summary>
+            <param name="component">The component with the property for which to retrieve the value. </param>
+            <returns>The value of a property for a given component.</returns>
+        </member>
+        <member name="M:CalculationWorks.NonCommercial.ViewModel.Forms.BcfBindingSourcePropertyDescriptor.ResetValue(System.Object)">
+            <summary>
+            When overridden in a derived class, resets the value for this property of the component to the default value. 
+            </summary>
+            <param name="component">The component with the property value that is to be reset to the default value. </param>
+        </member>
+        <member name="M:CalculationWorks.NonCommercial.ViewModel.Forms.BcfBindingSourcePropertyDescriptor.SetValue(System.Object,System.Object)">
+            <summary>
+            When overridden in a derived class, sets the value of the component to a different value. 
+            </summary>
+            <param name="component">The component with the property value that is to be set. </param>
+            <param name="value">The new value. </param>
+        </member>
+        <member name="M:CalculationWorks.NonCommercial.ViewModel.Forms.BcfBindingSourcePropertyDescriptor.ShouldSerializeValue(System.Object)">
+            <summary>
+            When overridden in a derived class, determines a value indicating whether the value of this property needs to be persisted. 
+            </summary>
+            <param name="component">The component with the property to be examined for persistence. </param>
+            <returns><c>true</c>  if the property should be persisted; otherwise, <c>false</c>.</returns>
+        </member>
+        <member name="P:CalculationWorks.NonCommercial.ViewModel.Forms.BcfBindingSourcePropertyDescriptor.ComponentType">
+            <summary>
+            When overridden in a derived class, gets the type of the component this property is bound to.
+            </summary>
+            <value>The type of the component.</value>
+            <returns>A <see cref="T:System.Type" /> that represents the type of component this property is bound to. When the <see cref="M:System.ComponentModel.PropertyDescriptor.GetValue(System.Object)" /> or <see cref="M:System.ComponentModel.PropertyDescriptor.SetValue(System.Object,System.Object)" /> methods are invoked, the object specified might be an instance of this type. </returns>
+        </member>
+        <member name="P:CalculationWorks.NonCommercial.ViewModel.Forms.BcfBindingSourcePropertyDescriptor.IsReadOnly">
+            <summary>
+            When overridden in a derived class, gets a value indicating whether this property is read-only. 
+            </summary>
+            <value><c>true</c> if this instance is read only; otherwise, <c>false</c>.</value>
+            <returns><c>true</c> if this instance is read only; otherwise, <c>false</c>.</returns>
+        </member>
+        <member name="P:CalculationWorks.NonCommercial.ViewModel.Forms.BcfBindingSourcePropertyDescriptor.PropertyType">
+            <summary>
+            When overridden in a derived class, gets the type of the property. 
+            </summary>
+            <value>The type of the property.</value>
+            <returns>A <see cref="T:System.Type" /> that represents the type of the property.</returns>
+        </member>
+        <member name="P:CalculationWorks.NonCommercial.ViewModel.Forms.BcfBindingSourcePropertyDescriptor.BindingSource">
+            <summary>
+            Gets the binding source.
+            </summary>
+            <value>The binding source.</value>
+        </member>
+        <member name="T:CalculationWorks.NonCommercial.ViewModel.Forms.BcfRowView">
+            <summary>
+            Represents a view of a BcfRow. 
+            </summary>
+        </member>
+        <member name="M:CalculationWorks.NonCommercial.ViewModel.Forms.BcfRowView.#ctor(CalculationWorks.NonCommercial.ViewModel.Forms.BcfRowViewBuilder)">
+            <summary>
+            Initializes a new instance of the <see cref="T:CalculationWorks.NonCommercial.ViewModel.Forms.BcfRowView"/> class.
+            </summary>
+            <param name="builder">The builder.</param>
+            <exception cref="T:System.ArgumentNullException">builder</exception>
+        </member>
+        <member name="M:CalculationWorks.NonCommercial.ViewModel.Forms.BcfRowView.IsFakeRowView">
+            <summary>
+            Determines whether this row view is a fake row.
+            </summary>
+            <returns><c>true</c> if this is a fake row; otherwise, <c>false</c>.</returns>
+            <remarks>
+            <para>When initializing Windows Forms BindingMachinery creates rows to browse meta data. To work around this really bad behavior these rows are marked as fake rows.</para>
+            <para>Fake rows are always virtual rows. So whether the dataset is changed nor undo items are created.</para>
+            </remarks>
+        </member>
+        <member name="M:CalculationWorks.NonCommercial.ViewModel.Forms.BcfRowView.IsAlive">
+            <summary>
+            Determines whether this instance is alive.
+            </summary>
+            <returns><c>true</c> if this instance is alive; otherwise, <c>false</c>.</returns>
+            <remarks>
+            <see cref="T:CalculationWorks.NonCommercial.ViewModel.Forms.BcfRowView"/> objects do not survive delete operations. After <see cref="M:CalculationWorks.NonCommercial.BusinessModel.BcfDataSet.Undo"/> a new <see cref="T:CalculationWorks.NonCommercial.ViewModel.Forms.BcfRowView"/> object will be created for the undone deleted <see cref="T:CalculationWorks.NonCommercial.BusinessModel.BcfRow"/>.
+            The same is applied to undone added <see cref="T:CalculationWorks.NonCommercial.BusinessModel.BcfRow"/> objects after <see cref="M:CalculationWorks.NonCommercial.BusinessModel.BcfDataSet.Redo"/>.
+            </remarks>
+        </member>
+        <member name="M:CalculationWorks.NonCommercial.ViewModel.Forms.BcfRowView.Cleanup">
+            <summary>
+            Method will be called when the instance will not longer be in use. Override this method to perform clean up operations.
+            </summary>
+        </member>
+        <member name="M:CalculationWorks.NonCommercial.ViewModel.Forms.BcfRowView.GetChildView(System.String)">
+            <summary>
+            Gets a child view chosen by the specified relation name.
+            </summary>
+            <param name="relationName">Name of the relation.</param>
+            <returns>BcfTableViewBase.</returns>
+            <exception cref="T:System.ArgumentNullException">relationName</exception>
+            <exception cref="T:System.Collections.Generic.KeyNotFoundException">View type for child table not registered</exception>
+        </member>
+        <member name="M:CalculationWorks.NonCommercial.ViewModel.Forms.BcfRowView.GetChildView(CalculationWorks.NonCommercial.BusinessModel.BcfRelation)">
+            <summary>
+            Gets a child view chosen by the specified relation.
+            </summary>
+            <param name="relation">The relation.</param>
+            <returns>BcfTableViewBase.</returns>
+            <exception cref="T:System.ArgumentNullException">relation</exception>
+            <exception cref="T:System.ArgumentException">relations parent table does not equal views table</exception>
+            <exception cref="T:System.Collections.Generic.KeyNotFoundException">View type for child table not registered</exception>
+        </member>
+        <member name="M:CalculationWorks.NonCommercial.ViewModel.Forms.BcfRowView.GetParentRowView(System.String)">
+            <summary>
+            Gets the parent row view chosen by the specified relation name.
+            </summary>
+            <param name="relationName">Name of the relation.</param>
+            <returns>BcfRowView.</returns>
+            <exception cref="T:System.ArgumentNullException">relationName</exception>
+            <exception cref="T:System.Collections.Generic.KeyNotFoundException">View type for parent table not registered</exception>
+        </member>
+        <member name="M:CalculationWorks.NonCommercial.ViewModel.Forms.BcfRowView.GetParentRowView(CalculationWorks.NonCommercial.BusinessModel.BcfRelation)">
+            <summary>
+            Gets the parent row view chosen by the specified relation.
+            </summary>
+            <param name="relation">The relation.</param>
+            <returns>BcfRowView.</returns>
+            <exception cref="T:System.ArgumentNullException">relation</exception>
+            <exception cref="T:System.ArgumentException">relations child table does not equal views table</exception>
+        </member>
+        <member name="M:CalculationWorks.NonCommercial.ViewModel.Forms.BcfRowView.GetRow">
+            <summary>
+            Gets the associated <see cref="T:CalculationWorks.NonCommercial.BusinessModel.BcfRow"/>.
+            </summary>
+            <returns>the associated <see cref="T:CalculationWorks.NonCommercial.BusinessModel.BcfRow"/> or <c>null</c> if <see cref="M:CalculationWorks.NonCommercial.ViewModel.Forms.BcfRowView.IsVirtual"/> is <c>true</c>.</returns>
+        </member>
+        <member name="M:CalculationWorks.NonCommercial.ViewModel.Forms.BcfRowView.GetTableView">
+            <summary>
+            Gets the <see cref="P:CalculationWorks.NonCommercial.ViewModel.Forms.BcfViewManager.DefaultViews"/> item this <see cref="T:CalculationWorks.NonCommercial.ViewModel.Forms.BcfRowView"/> belongs to.
+            </summary>
+            <returns><see cref="T:CalculationWorks.NonCommercial.ViewModel.Forms.BcfTableViewBase"/>.</returns>
+            <remarks>
+            <see cref="P:CalculationWorks.NonCommercial.ViewModel.Forms.BcfTableViewBase.ViewType"/> of the returned object is always <see cref="F:CalculationWorks.NonCommercial.ViewModel.Forms.BcfTableViewType.DefaultView"/>.
+            </remarks>
+        </member>
+        <member name="M:CalculationWorks.NonCommercial.ViewModel.Forms.BcfRowView.NotifyPropertyChanged(System.String)">
+            <summary>
+            Raises or queues <see cref="E:CalculationWorks.NonCommercial.ViewModel.Forms.BcfRowView.PropertyChanged"/>, depends on <see cref="P:CalculationWorks.NonCommercial.ViewModel.Forms.BcfViewManager.DeferPropertyChanged"/>
+            </summary>
+            <param name="propertyName">Name of the property.</param>
+        </member>
+        <member name="M:CalculationWorks.NonCommercial.ViewModel.Forms.BcfRowView.OnPropertyChanged(System.String)">
+            <summary>
+            Raises the <see cref="E:CalculationWorks.NonCommercial.ViewModel.Forms.BcfRowView.PropertyChanged"/> event.
+            </summary>
+            <param name="propertyName">Name of the property.</param>
+            <remarks>
+            Do not call this method directly. Call <see cref="M:CalculationWorks.NonCommercial.ViewModel.Forms.BcfRowView.NotifyPropertyChanged(System.String)"/> instead.
+            </remarks>
+        </member>
+        <member name="M:CalculationWorks.NonCommercial.ViewModel.Forms.BcfRowView.NotifyErrorsChanged(System.String)">
+            <summary>
+            Raises or queues <see cref="E:CalculationWorks.NonCommercial.ViewModel.Forms.BcfRowView.ErrorsChanged"/>, depends on <see cref="P:CalculationWorks.NonCommercial.ViewModel.Forms.BcfViewManager.DeferPropertyChanged"/>
+            </summary>
+            <param name="propertyName">Name of the property.</param>
+        </member>
+        <member name="M:CalculationWorks.NonCommercial.ViewModel.Forms.BcfRowView.OnErrorsChanged(System.String)">
+            <summary>
+            Raises the <see cref="E:CalculationWorks.NonCommercial.ViewModel.Forms.BcfRowView.ErrorsChanged"/> event.
+            </summary>
+            <param name="propertyName">The name of the property to retrieve validation errors for; or <c>null</c> or <see cref="F:System.String.Empty"/>, to retrieve entity-level errors.</param>
+            <remarks>
+            Do not call this method directly. Call <see cref="M:CalculationWorks.NonCommercial.ViewModel.Forms.BcfRowView.NotifyErrorsChanged(System.String)"/> instead.
+            </remarks>
+        </member>
+        <member name="M:CalculationWorks.NonCommercial.ViewModel.Forms.BcfRowView.NotifyItemChanged">
+            <summary>
+            Raises or queues <see cref="E:CalculationWorks.NonCommercial.ViewModel.Forms.BcfRowView.ItemChanged"/>, depends on <see cref="P:CalculationWorks.NonCommercial.ViewModel.Forms.BcfViewManager.DeferPropertyChanged"/>
+            </summary>
+        </member>
+        <member name="M:CalculationWorks.NonCommercial.ViewModel.Forms.BcfRowView.OnItemChanged">
+            <summary>
+            Raises the <see cref="E:CalculationWorks.NonCommercial.ViewModel.Forms.BcfRowView.ItemChanged"/> event.
+            </summary>
+            <remarks>
+            Do not call this method directly. Call <see cref="M:CalculationWorks.NonCommercial.ViewModel.Forms.BcfRowView.NotifyItemChanged"/> instead.
+            </remarks>
+        </member>
+        <member name="M:CalculationWorks.NonCommercial.ViewModel.Forms.BcfRowView.GetErrors(System.String)">
+            <summary>
+            Gets an <see cref="T:System.Collections.Generic.IEnumerable`1"/> containing the formated <see cref="T:CalculationWorks.NonCommercial.BusinessModel.BcfValidatorCellContent"/>.
+            </summary>
+            <param name="propertyName">Name of the property. If propertyName is <c>null</c> or an empty <see cref="T:System.String"/> <see cref="M:System.Linq.Enumerable.Empty``1"/> will be returned.</param>
+            <returns><see cref="T:System.Collections.Generic.IEnumerable`1"/> containing the messages</returns>
+        </member>
+        <member name="M:CalculationWorks.NonCommercial.ViewModel.Forms.BcfRowView.GetErrors(CalculationWorks.NonCommercial.BusinessModel.BcfColumn)">
+            <summary>
+            Gets an <see cref="T:System.Collections.Generic.IEnumerable`1"/> containing the formated <see cref="T:CalculationWorks.NonCommercial.BusinessModel.BcfValidatorCellContent"/>.
+            </summary>
+            <param name="column">The column.</param>
+            <returns>IEnumerable.</returns>
+            <exception cref="T:System.ArgumentNullException">column</exception>
+            <exception cref="T:System.ArgumentException">column not in table</exception>
+        </member>
+        <member name="M:CalculationWorks.NonCommercial.ViewModel.Forms.BcfRowView.GetValidationTags(System.String)">
+            <summary>
+            Gets the <see cref="T:System.Collections.Generic.IEnumerable`1"/> of the specified column.
+            </summary>
+            <param name="columnName">Name of the column.</param>
+            <returns>IEnumerable&lt;BcfValidatorCellContent&gt;.</returns>
+        </member>
+        <member name="M:CalculationWorks.NonCommercial.ViewModel.Forms.BcfRowView.GetValidationTags(CalculationWorks.NonCommercial.BusinessModel.BcfColumn)">
+            <summary>
+            Gets the <see cref="T:System.Collections.Generic.IEnumerable`1"/> of the specified column.
+            </summary>
+            <param name="column">The column.</param>
+            <returns>IEnumerable&lt;BcfValidatorCellContent&gt;.</returns>
+            <exception cref="T:System.Collections.Generic.KeyNotFoundException">A column with columnName is not in table</exception>
+        </member>
+        <member name="M:CalculationWorks.NonCommercial.ViewModel.Forms.BcfRowView.GetHasErrors">
+            <summary>
+            Returns <c>true</c> if any validation messages are related with this <see cref="T:CalculationWorks.NonCommercial.ViewModel.Forms.BcfRowView"/>, <c>false</c> otherwise.
+            </summary>
+            <returns><c>true</c> if any validation messages are related with this <see cref="T:CalculationWorks.NonCommercial.ViewModel.Forms.BcfRowView"/>, <c>false</c> otherwise.</returns>
+        </member>
+        <member name="M:CalculationWorks.NonCommercial.ViewModel.Forms.BcfRowView.GetColumnError(System.String)">
+            <summary>
+            Gets the error description for a column, specified by name.
+            </summary>
+            <param name="columnName">Name of the column.</param>
+            <returns>System.String.</returns>
+        </member>
+        <member name="M:CalculationWorks.NonCommercial.ViewModel.Forms.BcfRowView.FormatValidatorCellContent(CalculationWorks.NonCommercial.BusinessModel.BcfValidatorCellContent)">
+            <summary>
+            Formats the validator information.
+            </summary>
+            <param name="cellContent">The information.</param>
+            <returns>System.String.</returns>
+            <exception cref="T:System.ArgumentNullException">cellContent</exception>
+        </member>
+        <member name="M:CalculationWorks.NonCommercial.ViewModel.Forms.BcfRowView.IsVirtual">
+            <summary>
+            Determines whether this instance is virtual.
+            </summary>
+            <returns><c>true</c> if this instance is virtual; otherwise, <c>false</c>.</returns>
+        </member>
+        <member name="M:CalculationWorks.NonCommercial.ViewModel.Forms.BcfRowView.SetValue(System.String,System.Object)">
+            <summary>
+            Sets the value of the associated <see cref="T:CalculationWorks.NonCommercial.BusinessModel.BcfRow"/> <see cref="T:CalculationWorks.NonCommercial.BusinessModel.BcfCell"/> with the specified name.
+            </summary>
+            <param name="propertyName">Name of the property.</param>
+            <param name="value">The value.</param>
+            <exception cref="T:System.ArgumentNullException">propertyName is null</exception>
+        </member>
+        <member name="M:CalculationWorks.NonCommercial.ViewModel.Forms.BcfRowView.SetValue(CalculationWorks.NonCommercial.BusinessModel.BcfColumn,System.Object)">
+            <summary>
+            Sets the value of the associated <see cref="T:CalculationWorks.NonCommercial.BusinessModel.BcfRow"/> <see cref="T:CalculationWorks.NonCommercial.BusinessModel.BcfCell"/> with the specified name.
+            </summary>
+            <param name="column">The column.</param>
+            <param name="value">The value.</param>
+            <exception cref="T:System.ArgumentNullException">propertyName is null</exception>
+        </member>
+        <member name="M:CalculationWorks.NonCommercial.ViewModel.Forms.BcfRowView.GetValue(System.String)">
+            <summary>
+            Gets the value of the associated <see cref="T:CalculationWorks.NonCommercial.BusinessModel.BcfRow"/> <see cref="T:CalculationWorks.NonCommercial.BusinessModel.BcfCell"/> with the specified name.
+            </summary>
+            <param name="propertyName">Name of the property.</param>
+            <returns>System.Object.</returns>
+            <exception cref="T:System.ArgumentNullException">propertyName is null</exception>
+        </member>
+        <member name="M:CalculationWorks.NonCommercial.ViewModel.Forms.BcfRowView.GetValue(CalculationWorks.NonCommercial.BusinessModel.BcfColumn)">
+            <summary>
+            Gets the value of the associated <see cref="T:CalculationWorks.NonCommercial.BusinessModel.BcfRow"/> <see cref="T:CalculationWorks.NonCommercial.BusinessModel.BcfCell"/> with the specified name.
+            </summary>
+            <param name="column">The column.</param>
+            <returns>System.Object.</returns>
+            <exception cref="T:System.ArgumentNullException">propertyName is null</exception>
+        </member>
+        <member name="M:CalculationWorks.NonCommercial.ViewModel.Forms.BcfRowView.Delete">
+            <summary>
+            Deletes the associated <see cref="T:CalculationWorks.NonCommercial.BusinessModel.BcfRow"/>.
+            </summary>
+            <returns><c>true</c> if row was deleted, <c>false</c> otherwise.</returns>
+            <exception cref="T:System.InvalidOperationException"><see cref="M:CalculationWorks.NonCommercial.ViewModel.Forms.BcfRowView.IsVirtual"/> is true</exception>
+            <remarks>
+            <see cref="T:CalculationWorks.NonCommercial.ViewModel.Forms.BcfRowView"/> objects do not survive delete operations. After <see cref="M:CalculationWorks.NonCommercial.BusinessModel.BcfDataSet.Undo"/> a new <see cref="T:CalculationWorks.NonCommercial.ViewModel.Forms.BcfRowView"/> object will be created for the undone deleted <see cref="T:CalculationWorks.NonCommercial.BusinessModel.BcfRow"/>.
+            The same is applied to undone added <see cref="T:CalculationWorks.NonCommercial.BusinessModel.BcfRow"/> objects after <see cref="M:CalculationWorks.NonCommercial.BusinessModel.BcfDataSet.Redo"/>.
+            </remarks>
+        </member>
+        <member name="E:CalculationWorks.NonCommercial.ViewModel.Forms.BcfRowView.ItemChanged">
+            <summary>
+            Occurs when any data of this item changed.
+            </summary>
+        </member>
+        <member name="E:CalculationWorks.NonCommercial.ViewModel.Forms.BcfRowView.PropertyChanged">
+            <summary>
+            Occurs when a property changed.
+            </summary>
+        </member>
+        <member name="E:CalculationWorks.NonCommercial.ViewModel.Forms.BcfRowView.ErrorsChanged">
+            <summary>
+            Occurs when the result of <see cref="M:CalculationWorks.NonCommercial.ViewModel.Forms.BcfRowView.GetErrors(System.String)"/> changed.
+            </summary>
+        </member>
+        <member name="T:CalculationWorks.NonCommercial.ViewModel.Forms.BcfRowViewBuilder">
+            <summary>
+            Infrastructure. The type supports the infrastructure and is not intended to be used directly from your code. This class cannot be inherited.
+            </summary>
+        </member>
+        <member name="P:CalculationWorks.NonCommercial.ViewModel.Forms.BcfRowViewBuilder.DefaultTableView">
+            <summary>
+            Gets the default table view.
+            </summary>
+            <value>The default table view.</value>
+        </member>
+        <member name="P:CalculationWorks.NonCommercial.ViewModel.Forms.BcfRowViewBuilder.Row">
+            <summary>
+            Gets the row.
+            </summary>
+            <value>The row.</value>
+        </member>
+        <member name="P:CalculationWorks.NonCommercial.ViewModel.Forms.BcfRowViewBuilder.VirtualProperties">
+            <summary>
+            Gets the virtual properties.
+            </summary>
+            <value>The virtual properties.</value>
+        </member>
+        <member name="P:CalculationWorks.NonCommercial.ViewModel.Forms.BcfRowViewBuilder.IsFakeRowView">
+            <summary>
+            Gets a value indicating whether this instance is fake row view.
+            </summary>
+            <value><c>true</c> if this instance is fake row view; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="T:CalculationWorks.NonCommercial.ViewModel.Forms.BcfTableViewBase`1">
+            <summary>
+            Generic base class of row view collections.
+            </summary>
+            <typeparam name="TRowView">The type of the <see cref="T:CalculationWorks.NonCommercial.ViewModel.Forms.BcfRowView"/>.</typeparam>
+        </member>
+        <member name="T:CalculationWorks.NonCommercial.ViewModel.Forms.BcfTableViewBase">
+            <summary>
+            Base class of row view collections.
+            </summary>
+        </member>
+        <member name="M:CalculationWorks.NonCommercial.ViewModel.Forms.BcfTableViewBase.#ctor(CalculationWorks.NonCommercial.ViewModel.Forms.BcfTableViewBuilder)">
+            <summary>
+            Initializes a new instance of the <see cref="T:CalculationWorks.NonCommercial.ViewModel.Forms.BcfTableViewBase"/> class.
+            </summary>
+            <param name="builder">The builder.</param>
+            <exception cref="T:System.ArgumentNullException">builder</exception>
+        </member>
+        <member name="M:CalculationWorks.NonCommercial.ViewModel.Forms.BcfTableViewBase.GetRowViewType">
+            <summary>
+            Gets the type of the row views in this collection.
+            </summary>
+            <returns>The <see cref="T:System.Type"/> of the row views</returns>
+        </member>
+        <member name="M:CalculationWorks.NonCommercial.ViewModel.Forms.BcfTableViewBase.AddVirtualRowView(System.Collections.Generic.Dictionary{System.String,System.Object})">
+            <summary>
+            Adds a virtual <see cref="T:CalculationWorks.NonCommercial.ViewModel.Forms.BcfRowView"/>.
+            </summary>
+            <param name="properties">The properties.</param>
+            <returns>The new <see cref="T:CalculationWorks.NonCommercial.ViewModel.Forms.BcfRowView"/>.</returns>
+        </member>
+        <member name="M:CalculationWorks.NonCommercial.ViewModel.Forms.BcfTableViewBase.RemoveVirtualRowView(CalculationWorks.NonCommercial.ViewModel.Forms.BcfRowView)">
+            <summary>
+            Removes a virtual <see cref="T:CalculationWorks.NonCommercial.ViewModel.Forms.BcfRowView"/>.
+            </summary>
+            <param name="virtualRowView">The virtual <see cref="T:CalculationWorks.NonCommercial.ViewModel.Forms.BcfRowView"/>.</param>
+            <exception cref="T:System.ArgumentNullException">virtualRowView</exception>
+            <exception cref="T:System.ArgumentException">virtualRowView is not virtual</exception>
+        </member>
+        <member name="M:CalculationWorks.NonCommercial.ViewModel.Forms.BcfTableViewBase.IndexOf(CalculationWorks.NonCommercial.ViewModel.Forms.BcfRowView)">
+            <summary>
+            Determines the index of a specific item in the list. 
+            </summary>
+            <param name="rowView">The row view.</param>
+            <returns>System.Int32.</returns>
+        </member>
+        <member name="M:CalculationWorks.NonCommercial.ViewModel.Forms.BcfTableViewBase.GetRowViewProperties">
+            <summary>
+            Gets the row view properties.
+            </summary>
+            <returns>PropertyDescriptorCollection.</returns>
+        </member>
+        <member name="M:CalculationWorks.NonCommercial.ViewModel.Forms.BcfTableViewBase.GetRowViewAt(System.Int32)">
+            <summary>
+            Gets the <see cref="T:CalculationWorks.NonCommercial.ViewModel.Forms.BcfRowView"/> at the specified index.
+            </summary>
+            <param name="index">The index.</param>
+            <returns>The <see cref="T:CalculationWorks.NonCommercial.ViewModel.Forms.BcfRowView"/> at the specified index.</returns>
+            <exception cref="T:System.ArgumentOutOfRangeException">index is less than 0 or index is equal to or greater than <see cref="P:CalculationWorks.NonCommercial.ViewModel.Forms.BcfTableViewBase.Count"/>.</exception>
+        </member>
+        <member name="M:CalculationWorks.NonCommercial.ViewModel.Forms.BcfTableViewBase.GetRowView(CalculationWorks.NonCommercial.BusinessModel.BcfRow)">
+            <summary>
+            Gets the <see cref="T:CalculationWorks.NonCommercial.ViewModel.Forms.BcfRowView"/> or <c>null</c> if no <see cref="T:CalculationWorks.NonCommercial.ViewModel.Forms.BcfRowView"/> is associated with the given <see cref="T:CalculationWorks.NonCommercial.BusinessModel.BcfRow"/>.
+            </summary>
+            <param name="row">The row.</param>
+            <returns><see cref="T:CalculationWorks.NonCommercial.ViewModel.Forms.BcfRowView"/> or <c>null</c> if no <see cref="T:CalculationWorks.NonCommercial.ViewModel.Forms.BcfRowView"/> is associated with the given <see cref="T:CalculationWorks.NonCommercial.BusinessModel.BcfRow"/> or given <see cref="T:CalculationWorks.NonCommercial.BusinessModel.BcfRow"/> is <c>null</c>.</returns>
+            <remarks>
+            This method does not check if this <see cref="T:CalculationWorks.NonCommercial.ViewModel.Forms.BcfTableViewBase"/> object contains the returned <see cref="T:CalculationWorks.NonCommercial.ViewModel.Forms.BcfRowView"/>.
+            To retrieve contained <see cref="T:CalculationWorks.NonCommercial.ViewModel.Forms.BcfRowView"/> only use <see cref="M:CalculationWorks.NonCommercial.ViewModel.Forms.BcfTableViewBase.GetContainedRowView(CalculationWorks.NonCommercial.BusinessModel.BcfRow)"/>
+            </remarks>
+        </member>
+        <member name="M:CalculationWorks.NonCommercial.ViewModel.Forms.BcfTableViewBase.GetContainedRowView(CalculationWorks.NonCommercial.BusinessModel.BcfRow)">
+            <summary>
+            Gets the <see cref="T:CalculationWorks.NonCommercial.ViewModel.Forms.BcfRowView"/> or <c>null</c> if no <see cref="T:CalculationWorks.NonCommercial.ViewModel.Forms.BcfRowView"/> is associated with the given <see cref="T:CalculationWorks.NonCommercial.BusinessModel.BcfRow"/> or this <see cref="T:CalculationWorks.NonCommercial.ViewModel.Forms.BcfTableViewBase"/> does not contain the associated <see cref="T:CalculationWorks.NonCommercial.ViewModel.Forms.BcfRowView"/>.
+            </summary>
+            <param name="row">The row.</param>
+            <exception cref="T:System.ArgumentNullException">row</exception>
+            <returns>The <see cref="T:CalculationWorks.NonCommercial.ViewModel.Forms.BcfRowView"/> or <c>null</c> if no <see cref="T:CalculationWorks.NonCommercial.ViewModel.Forms.BcfRowView"/> is associated with the given <see cref="T:CalculationWorks.NonCommercial.BusinessModel.BcfRow"/> or this <see cref="T:CalculationWorks.NonCommercial.ViewModel.Forms.BcfTableViewBase"/> does not contain the associated <see cref="T:CalculationWorks.NonCommercial.ViewModel.Forms.BcfRowView"/>.</returns>
+        </member>
+        <member name="M:CalculationWorks.NonCommercial.ViewModel.Forms.BcfTableViewBase.Cleanup">
+            <summary>
+            Method will be called when the instance will not longer be in use. Override this method to perform clean up operations.
+            </summary>
+        </member>
+        <member name="M:CalculationWorks.NonCommercial.ViewModel.Forms.BcfTableViewBase.ApplySort(System.String,System.ComponentModel.ListSortDirection)">
+            <summary>
+            Sorts the list based on a column name and a <see cref="T:System.ComponentModel.ListSortDirection"/>.
+            </summary>
+            <param name="columnName">Name of the column.</param>
+            <param name="direction">The direction.</param>
+            <exception cref="T:System.ArgumentNullException">columnName</exception>
+            <exception cref="T:System.ArgumentException">associated property of columnName not found</exception>
+        </member>
+        <member name="M:CalculationWorks.NonCommercial.ViewModel.Forms.BcfTableViewBase.ApplySort(System.ComponentModel.PropertyDescriptor,System.ComponentModel.ListSortDirection)">
+            <summary>
+            Sorts the list based on a <see cref="T:System.ComponentModel.PropertyDescriptor"/> and a <see cref="T:System.ComponentModel.ListSortDirection"/>.
+            </summary>
+            <param name="property">The <see cref="T:System.ComponentModel.PropertyDescriptor"/> to sort by.</param>
+            <param name="direction">One of the <see cref="T:System.ComponentModel.ListSortDirection"/> values.</param>
+            <exception cref="T:System.ArgumentNullException">property</exception>
+        </member>
+        <member name="M:CalculationWorks.NonCommercial.ViewModel.Forms.BcfTableViewBase.RemoveSort">
+            <summary>
+            Removes the applied sort. 
+            </summary>
+        </member>
+        <member name="M:CalculationWorks.NonCommercial.ViewModel.Forms.BcfTableViewBase.ApplySort(System.ComponentModel.ListSortDescriptionCollection)">
+            <summary>
+            Sorts the collection based on the given <see cref="T:System.ComponentModel.ListSortDescriptionCollection" />.
+            </summary>
+            <param name="sorts">The <see cref="T:System.ComponentModel.ListSortDescriptionCollection" /> to apply to the data source.</param>
+        </member>
+        <member name="M:CalculationWorks.NonCommercial.ViewModel.Forms.BcfTableViewBase.Sort(System.ComponentModel.ListSortDescriptionCollection)">
+            <summary>
+            Sorts the collection based on the given sorts. The <see cref="P:CalculationWorks.NonCommercial.ViewModel.Forms.BcfTableViewBase.SortDescriptions"/> property will not be updated.
+            </summary>
+            <param name="sorts">The sorts.</param>
+        </member>
+        <member name="M:CalculationWorks.NonCommercial.ViewModel.Forms.BcfTableViewBase.ApplyFilter(System.Boolean)">
+            <summary>
+            Applies the filter.
+            </summary>
+            <param name="multipleChangesExpected">if set to <c>true</c> multiple changes will be expected (performance relevant).</param>
+        </member>
+        <member name="M:CalculationWorks.NonCommercial.ViewModel.Forms.BcfTableViewBase.ApplyFilter">
+            <summary>
+            Applies the filter.
+            </summary>
+        </member>
+        <member name="M:CalculationWorks.NonCommercial.ViewModel.Forms.BcfTableViewBase.Dispose">
+            <summary>
+            Performs application-defined tasks associated with freeing, releasing, or resetting unmanaged resources. 
+            </summary>
+        </member>
+        <member name="M:CalculationWorks.NonCommercial.ViewModel.Forms.BcfTableViewBase.Dispose(System.Boolean)">
+            <summary>
+            Releases unmanaged and - optionally - managed resources.
+            </summary>
+            <param name="disposing"><c>true</c> to release both managed and unmanaged resources; <c>false</c> to release only unmanaged resources.</param>
+        </member>
+        <member name="P:CalculationWorks.NonCommercial.ViewModel.Forms.BcfTableViewBase.BcfRowViews">
+            <summary>
+            Gets the row views.
+            </summary>
+            <value>The row views.</value>
+        </member>
+        <member name="P:CalculationWorks.NonCommercial.ViewModel.Forms.BcfTableViewBase.ViewManager">
+            <summary>
+            Gets the <see cref="T:CalculationWorks.NonCommercial.ViewModel.Forms.BcfViewManager"/> this <see cref="T:CalculationWorks.NonCommercial.ViewModel.Forms.BcfTableViewBase"/> belongs to.
+            </summary>
+            <value>The <see cref="T:CalculationWorks.NonCommercial.ViewModel.Forms.BcfViewManager"/>.</value>
+        </member>
+        <member name="P:CalculationWorks.NonCommercial.ViewModel.Forms.BcfTableViewBase.ParentRowView">
+            <summary>
+            returns the parent <see cref="T:CalculationWorks.NonCommercial.ViewModel.Forms.BcfRowView"/> if this is a childview, else <c>null</c>.
+            </summary>
+            <returns>
+            The parent <see cref="T:CalculationWorks.NonCommercial.ViewModel.Forms.BcfRowView"/> if this is a childview, else <c>null</c>.
+            </returns>
+        </member>
+        <member name="P:CalculationWorks.NonCommercial.ViewModel.Forms.BcfTableViewBase.Table">
+            <summary>
+            Gets the associated <see cref="T:CalculationWorks.NonCommercial.BusinessModel.BcfTable"/>
+            </summary>
+            <value>The associated <see cref="T:CalculationWorks.NonCommercial.BusinessModel.BcfTable"/>.</value>
+        </member>
+        <member name="P:CalculationWorks.NonCommercial.ViewModel.Forms.BcfTableViewBase.Relation">
+            <summary>
+            Gets the associated <see cref="T:CalculationWorks.NonCommercial.BusinessModel.BcfRelation"/> if this is a childview, else <c>null</c>.
+            </summary>
+            <value>The associated <see cref="T:CalculationWorks.NonCommercial.BusinessModel.BcfRelation"/> if this is a childview, else <c>null</c>.</value>
+        </member>
+        <member name="P:CalculationWorks.NonCommercial.ViewModel.Forms.BcfTableViewBase.AllowDelete">
+            <summary>
+            Gets or sets a value indicating whether windows forms components such as <see cref="T:System.Windows.Forms.DataGridView"/> should enable delete functionality.
+            </summary>
+            <value><c>true</c> if delete functionality should be enabled otherwise, <c>false</c>.</value>
+        </member>
+        <member name="E:CalculationWorks.NonCommercial.ViewModel.Forms.BcfTableViewBase.ListChanged">
+            <summary>
+            Occurs when the list changes or an item in the list changes.
+            </summary>
+        </member>
+        <member name="P:CalculationWorks.NonCommercial.ViewModel.Forms.BcfTableViewBase.Count">
+            <summary>
+            Gets the number of elements contained in the collection.
+            </summary>
+            <value>The count.</value>
+            <returns>The number of elements contained in the collection.</returns>
+        </member>
+        <member name="P:CalculationWorks.NonCommercial.ViewModel.Forms.BcfTableViewBase.Name">
+            <summary>
+            Gets when <see cref="P:CalculationWorks.NonCommercial.ViewModel.Forms.BcfTableViewBase.ViewType"/> is <see cref="F:CalculationWorks.NonCommercial.ViewModel.Forms.BcfTableViewType.ChildView"/> the name of associated <see cref="T:CalculationWorks.NonCommercial.BusinessModel.BcfRelation"/>, otherwise the name of associated <see cref="T:CalculationWorks.NonCommercial.BusinessModel.BcfTable"/>
+            </summary>
+            <value>When <see cref="P:CalculationWorks.NonCommercial.ViewModel.Forms.BcfTableViewBase.ViewType"/> is <see cref="F:CalculationWorks.NonCommercial.ViewModel.Forms.BcfTableViewType.ChildView"/> the name of associated <see cref="T:CalculationWorks.NonCommercial.BusinessModel.BcfRelation"/>, otherwise the name of associated <see cref="T:CalculationWorks.NonCommercial.BusinessModel.BcfTable"/></value>
+        </member>
+        <member name="P:CalculationWorks.NonCommercial.ViewModel.Forms.BcfTableViewBase.IsSorted">
+            <summary>
+            Gets whether the items in the list are sorted.
+            </summary>
+            <value><c>true</c> if this instance is sorted; otherwise, <c>false</c>.</value>
+            <returns>true  if ApplySort has been called and RemoveSort has not been called; otherwise, false.</returns>
+            <returns><c>true</c>, if <see cref="M:System.ComponentModel.IBindingList.ApplySort(System.ComponentModel.PropertyDescriptor,System.ComponentModel.ListSortDirection)" /> has been called and <see cref="M:System.ComponentModel.IBindingList.RemoveSort" /> has not been called; otherwise, false.</returns>
+        </member>
+        <member name="P:CalculationWorks.NonCommercial.ViewModel.Forms.BcfTableViewBase.SortProperty">
+            <summary>
+            Get the <see cref="T:System.ComponentModel.PropertyDescriptor" /> that is being used for sorting.
+            </summary>
+            <value>The sort property.</value>
+            <returns>The <see cref="T:System.ComponentModel.PropertyDescriptor" /> that is being used for sorting.</returns>
+        </member>
+        <member name="P:CalculationWorks.NonCommercial.ViewModel.Forms.BcfTableViewBase.SortDirection">
+            <summary>
+            Gets the sort order.
+            </summary>
+            <value>The sort direction.</value>
+            <returns>One of the <see cref="T:System.ComponentModel.ListSortDirection" /> values.</returns>
+        </member>
+        <member name="P:CalculationWorks.NonCommercial.ViewModel.Forms.BcfTableViewBase.SortDescriptions">
+            <summary>
+            Gets the collection of sort descriptions currently applied to the data source.
+            </summary>
+            <value>The sort descriptions.</value>
+            <returns>The <see cref="T:System.ComponentModel.ListSortDescriptionCollection" /> currently applied to the data source.</returns>
+        </member>
+        <member name="P:CalculationWorks.NonCommercial.ViewModel.Forms.BcfTableViewBase.FilterFunction">
+            <summary>
+            Gets or sets the filter function.
+            </summary>
+            <value>The filter function.</value>
+        </member>
+        <member name="P:CalculationWorks.NonCommercial.ViewModel.Forms.BcfTableViewBase.ViewType">
+            <summary>
+            Gets the type of the view.
+            </summary>
+            <value>The type of the view.</value>
+        </member>
+        <member name="E:CalculationWorks.NonCommercial.ViewModel.Forms.BcfTableViewBase.Disposed">
+            <summary>
+            Represents the method that handles the <see cref="E:System.ComponentModel.IComponent.Disposed"/> event of a component.
+            </summary>
+        </member>
+        <member name="P:CalculationWorks.NonCommercial.ViewModel.Forms.BcfTableViewBase.IsDisposed">
+            <summary>
+            Gets a value indicating whether this instance is disposed.
+            </summary>
+            <value><c>true</c> if this instance is disposed; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="M:CalculationWorks.NonCommercial.ViewModel.Forms.BcfTableViewBase`1.#ctor(CalculationWorks.NonCommercial.ViewModel.Forms.BcfTableViewBuilder)">
+            <summary>
+            Initializes a new instance of the <see cref="T:CalculationWorks.NonCommercial.ViewModel.Forms.BcfTableViewBase"/> class.
+            </summary>
+            <param name="builder">The builder.</param>
+        </member>
+        <member name="M:CalculationWorks.NonCommercial.ViewModel.Forms.BcfTableViewBase`1.GetRowViewType">
+            <summary>
+            Gets the type of the row view.
+            </summary>
+            <returns>Type.</returns>
+        </member>
+        <member name="M:CalculationWorks.NonCommercial.ViewModel.Forms.BcfTableViewBase`1.CreateRowView(CalculationWorks.NonCommercial.ViewModel.Forms.BcfRowViewBuilder)">
+            <summary>
+            Creates the row view.
+            </summary>
+            <param name="builder">The builder.</param>
+            <returns>TRowView.</returns>
+        </member>
+        <member name="M:CalculationWorks.NonCommercial.ViewModel.Forms.BcfTableViewBase`1.GetEnumerator">
+            <summary>
+            Returns an enumerator that iterates through the collection.
+            </summary>
+            <returns>An enumerator that can be used to iterate through the collection.</returns>
+        </member>
+        <member name="M:CalculationWorks.NonCommercial.ViewModel.Forms.BcfTableViewBase`1.Contains(`0)">
+            <summary>
+            Determines whether this collection contains the specified item.
+            </summary>
+            <param name="item">The item.</param>
+            <returns><c>true</c> if this collection contains the specified item; otherwise, <c>false</c>.</returns>
+        </member>
+        <member name="M:CalculationWorks.NonCommercial.ViewModel.Forms.BcfTableViewBase`1.CopyTo(`0[],System.Int32)">
+            <summary>
+            Copies the items to a compatible one-dimensional array, starting at the specified index of the target array.
+            </summary>
+            <param name="array">The one-dimensional Array that is the destination of the elements copied from <see cref="P:CalculationWorks.NonCommercial.ViewModel.Forms.BcfTableViewBase`1.RowViews"/>. The Array must have zero-based indexing.</param>
+            <param name="arrayIndex">The zero-based index in array at which copying begins.</param>
+        </member>
+        <member name="M:CalculationWorks.NonCommercial.ViewModel.Forms.BcfTableViewBase`1.IndexOf(`0)">
+            <summary>
+            Determines the index of a specific item in the list. 
+            </summary>
+            <param name="item">The item.</param>
+            <returns>System.Int32.</returns>
+        </member>
+        <member name="M:CalculationWorks.NonCommercial.ViewModel.Forms.BcfTableViewBase`1.GetRowView(CalculationWorks.NonCommercial.BusinessModel.BcfRow)">
+            <summary>
+            Gets the <see cref="T:CalculationWorks.NonCommercial.ViewModel.Forms.BcfRowView"/> or <c>null</c> if no <see cref="T:CalculationWorks.NonCommercial.ViewModel.Forms.BcfRowView"/> is associated with the given <see cref="T:CalculationWorks.NonCommercial.BusinessModel.BcfRow"/>.
+            </summary>
+            <param name="row">The row.</param>
+            <returns><see cref="T:CalculationWorks.NonCommercial.ViewModel.Forms.BcfRowView"/> or <c>null</c> if no <see cref="T:CalculationWorks.NonCommercial.ViewModel.Forms.BcfRowView"/> is associated with the given <see cref="T:CalculationWorks.NonCommercial.BusinessModel.BcfRow"/>.</returns>
+            <exception cref="T:System.ArgumentNullException">row</exception>
+            <remarks>
+            This method does not check if this <see cref="T:CalculationWorks.NonCommercial.ViewModel.Forms.BcfTableViewBase"/> object contains the returned <see cref="T:CalculationWorks.NonCommercial.ViewModel.Forms.BcfRowView"/>.
+            To retrieve contained <see cref="T:CalculationWorks.NonCommercial.ViewModel.Forms.BcfRowView"/> only use <see cref="M:CalculationWorks.NonCommercial.ViewModel.Forms.BcfTableViewBase`1.GetContainedRowView(CalculationWorks.NonCommercial.BusinessModel.BcfRow)"/>
+            </remarks>
+        </member>
+        <member name="M:CalculationWorks.NonCommercial.ViewModel.Forms.BcfTableViewBase`1.GetContainedRowView(CalculationWorks.NonCommercial.BusinessModel.BcfRow)">
+            <summary>
+            Gets the <see cref="T:CalculationWorks.NonCommercial.ViewModel.Forms.BcfRowView"/> or <c>null</c> if no <see cref="T:CalculationWorks.NonCommercial.ViewModel.Forms.BcfRowView"/> is associated with the given <see cref="T:CalculationWorks.NonCommercial.BusinessModel.BcfRow"/> or this <see cref="T:CalculationWorks.NonCommercial.ViewModel.Forms.BcfTableViewBase"/> does not contain the associated <see cref="T:CalculationWorks.NonCommercial.ViewModel.Forms.BcfRowView"/>.
+            </summary>
+            <param name="row">The row.</param>
+            <exception cref="T:System.ArgumentNullException">row</exception>
+            <returns>The <see cref="T:CalculationWorks.NonCommercial.ViewModel.Forms.BcfRowView"/> or <c>null</c> if no <see cref="T:CalculationWorks.NonCommercial.ViewModel.Forms.BcfRowView"/> is associated with the given <see cref="T:CalculationWorks.NonCommercial.BusinessModel.BcfRow"/> or this <see cref="T:CalculationWorks.NonCommercial.ViewModel.Forms.BcfTableViewBase"/> does not contain the associated <see cref="T:CalculationWorks.NonCommercial.ViewModel.Forms.BcfRowView"/>.</returns>
+        </member>
+        <member name="M:CalculationWorks.NonCommercial.ViewModel.Forms.BcfTableViewBase`1.GetRowViewAt(System.Int32)">
+            <summary>
+            Gets the <see cref="T:CalculationWorks.NonCommercial.ViewModel.Forms.BcfRowView"/> at the specified index.
+            </summary>
+            <param name="index">The index.</param>
+            <returns>The <see cref="T:CalculationWorks.NonCommercial.ViewModel.Forms.BcfRowView"/> at the specified index.</returns>
+            <exception cref="T:System.ArgumentOutOfRangeException">index is less than 0 or index is equal to or greater than <see cref="P:CalculationWorks.NonCommercial.ViewModel.Forms.BcfTableViewBase.Count"/>.</exception>
+        </member>
+        <member name="P:CalculationWorks.NonCommercial.ViewModel.Forms.BcfTableViewBase`1.Item(System.Int32)">
+            <summary>
+            Gets the element at the specified index
+            </summary>
+            <param name="index">The index.</param>
+            <returns>TRowView.</returns>
+        </member>
+        <member name="P:CalculationWorks.NonCommercial.ViewModel.Forms.BcfTableViewBase`1.RowViews">
+            <summary>
+            Gets the <see cref="T:CalculationWorks.NonCommercial.ViewModel.Forms.BcfRowView"/>s.
+            </summary>
+            <value>The <see cref="T:CalculationWorks.NonCommercial.ViewModel.Forms.BcfRowView"/>s.</value>
+        </member>
+        <member name="T:CalculationWorks.NonCommercial.ViewModel.Forms.BcfTableViewBuilder">
+            <summary>
+            Infrastructure. The type supports the infrastructure and is not intended to be used directly from your code. This class cannot be inherited.
+            </summary>
+        </member>
+        <member name="P:CalculationWorks.NonCommercial.ViewModel.Forms.BcfTableViewBuilder.ViewType">
+            <summary>
+            Gets the type of the view.
+            </summary>
+            <value>The type of the view.</value>
+        </member>
+        <member name="T:CalculationWorks.NonCommercial.ViewModel.Forms.BcfTableViewFactory">
+            <summary>
+            Manages the registration and creation of table views for an individual view manager.
+            </summary>
+        </member>
+        <member name="M:CalculationWorks.NonCommercial.ViewModel.Forms.BcfTableViewFactory.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:CalculationWorks.NonCommercial.ViewModel.Forms.BcfTableViewFactory"/> class.
+            </summary>
+        </member>
+        <member name="M:CalculationWorks.NonCommercial.ViewModel.Forms.BcfTableViewFactory.RegisterDefaultViewType">
+            <summary>
+            Registers the default type of the view.
+            </summary>
+            <exception cref="T:System.InvalidOperationException">instance is already in use</exception>
+        </member>
+        <member name="M:CalculationWorks.NonCommercial.ViewModel.Forms.BcfTableViewFactory.RegisterViewType``1(System.String,System.Func{CalculationWorks.NonCommercial.ViewModel.Forms.BcfTableViewBuilder,``0})">
+            <summary>
+            Registers the type of the view.
+            </summary>
+            <typeparam name="TTableViewBase">The type of the t table view base.</typeparam>
+            <param name="tableName">Name of the table.</param>
+            <param name="viewConstructor">The view constructor.</param>
+            <exception cref="T:System.ArgumentNullException">tableName</exception>
+            <exception cref="T:System.InvalidOperationException">instance is already in use</exception>
+        </member>
+        <member name="T:CalculationWorks.NonCommercial.ViewModel.Forms.BcfTableViewType">
+            <summary>
+            Enum BcfTableViewType
+            </summary>
+        </member>
+        <member name="F:CalculationWorks.NonCommercial.ViewModel.Forms.BcfTableViewType.DefaultView">
+            <summary>
+            default view
+            </summary>
+        </member>
+        <member name="F:CalculationWorks.NonCommercial.ViewModel.Forms.BcfTableViewType.ChildView">
+            <summary>
+            child view
+            </summary>
+        </member>
+        <member name="F:CalculationWorks.NonCommercial.ViewModel.Forms.BcfTableViewType.CustomView">
+            <summary>
+            custom view
+            </summary>
+        </member>
+        <member name="T:CalculationWorks.NonCommercial.ViewModel.Forms.BcfViewManager">
+            <summary>
+            Represents a windows forms bindable <see cref="T:CalculationWorks.NonCommercial.BusinessModel.BcfDataSet"/>-wrapper.
+            </summary>
+        </member>
+        <member name="M:CalculationWorks.NonCommercial.ViewModel.Forms.BcfViewManager.#ctor(CalculationWorks.NonCommercial.BusinessModel.BcfDataSet)">
+            <summary>
+            Initializes a new instance of the <see cref="T:CalculationWorks.NonCommercial.ViewModel.Forms.BcfViewManager"/> class.
+            </summary>
+            <param name="dataSet">The BcfDataSet.</param>
+        </member>
+        <member name="M:CalculationWorks.NonCommercial.ViewModel.Forms.BcfViewManager.#ctor(CalculationWorks.NonCommercial.BusinessModel.BcfDataSet,CalculationWorks.NonCommercial.ViewModel.Forms.BcfTableViewFactory)">
+            <summary>
+            Initializes a new instance of the <see cref="T:CalculationWorks.NonCommercial.ViewModel.Forms.BcfViewManager"/> class.
+            </summary>
+            <param name="dataSet">The BcfDataSet.</param>
+            <param name="tableViewFactory">The table view factory.</param>
+        </member>
+        <member name="M:CalculationWorks.NonCommercial.ViewModel.Forms.BcfViewManager.Dispose">
+            <summary>
+            Performs application-defined tasks associated with freeing, releasing, or resetting unmanaged resources. 
+            </summary>
+        </member>
+        <member name="M:CalculationWorks.NonCommercial.ViewModel.Forms.BcfViewManager.OnEventsReleaseStart(System.EventArgs)">
+            <summary>
+            Raises the <see cref="E:CalculationWorks.NonCommercial.ViewModel.Forms.BcfViewManager.EventsReleaseStart"/> event.
+            </summary>
+            <param name="e">The <see cref="T:System.EventArgs"/> instance containing the event data.</param>
+        </member>
+        <member name="M:CalculationWorks.NonCommercial.ViewModel.Forms.BcfViewManager.OnEventsReleaseEnd(System.EventArgs)">
+            <summary>
+            Raises the <see cref="E:CalculationWorks.NonCommercial.ViewModel.Forms.BcfViewManager.EventsReleaseEnd"/> event.
+            </summary>
+            <param name="e">The <see cref="T:System.EventArgs"/> instance containing the event data.</param>
+        </member>
+        <member name="M:CalculationWorks.NonCommercial.ViewModel.Forms.BcfViewManager.SupportsClassicBinding">
+            <summary>
+            Supports classic binding.
+            </summary>
+            <returns><c>true</c> if legacy complex binding is supported, <c>false</c> otherwise.</returns>
+        </member>
+        <member name="M:CalculationWorks.NonCommercial.ViewModel.Forms.BcfViewManager.CreateCustomView(System.String)">
+            <summary>
+            Creates the custom view.
+            </summary>
+            <param name="tableName">Name of the table.</param>
+            <returns>BcfTableViewBase.</returns>
+            <exception cref="T:System.ArgumentNullException">tableName</exception>
+        </member>
+        <member name="M:CalculationWorks.NonCommercial.ViewModel.Forms.BcfViewManager.CreateCustomView(System.String,System.Func{CalculationWorks.NonCommercial.ViewModel.Forms.BcfRowView,System.Boolean})">
+            <summary>
+            Creates the custom view.
+            </summary>
+            <param name="tableName">Name of the table.</param>
+            <param name="filterFunction">The filter function.</param>
+            <returns>BcfTableViewBase.</returns>
+            <exception cref="T:System.ArgumentNullException">tableName</exception>
+            <exception cref="T:System.ArgumentException">tableName not found in DataSet.Tables</exception>
+        </member>
+        <member name="M:CalculationWorks.NonCommercial.ViewModel.Forms.BcfViewManager.Dispose(System.Boolean)">
+            <summary>
+            Releases unmanaged and - optionally - managed resources.
+            </summary>
+            <param name="disposing"><c>true</c> to release both managed and unmanaged resources; <c>false</c> to release only unmanaged resources.</param>
+        </member>
+        <member name="M:CalculationWorks.NonCommercial.ViewModel.Forms.BcfViewManager.GetDefaultEmptyView(System.String)">
+            <summary>
+            Gets an default empty view.
+            </summary>
+            <param name="tableName">Name of the table.</param>
+            <returns>BcfTableViewBase.</returns>
+            <remarks>
+            <para>Do not add virtual rows to this views.</para>
+            </remarks>
+        </member>
+        <member name="M:CalculationWorks.NonCommercial.ViewModel.Forms.BcfViewManager.OnIgnoreRecurrentDataChange">
+            <summary>
+            Raises the <see cref="E:CalculationWorks.NonCommercial.ViewModel.Forms.BcfViewManager.IgnoreRecurrentDataChange"/> event.
+            </summary>
+        </member>
+        <member name="P:CalculationWorks.NonCommercial.ViewModel.Forms.BcfViewManager.DataSet">
+            <summary>
+            Gets the BcfDataSet.
+            </summary>
+            <value>The BcfDataSet.</value>
+        </member>
+        <member name="P:CalculationWorks.NonCommercial.ViewModel.Forms.BcfViewManager.DefaultViews">
+            <summary>
+            Gets the default views.
+            </summary>
+            <value>The default views.</value>
+        </member>
+        <member name="E:CalculationWorks.NonCommercial.ViewModel.Forms.BcfViewManager.Disposed">
+            <summary>
+            Represents the method that handles the <see cref="E:System.ComponentModel.IComponent.Disposed"/> event of a component.
+            </summary>
+        </member>
+        <member name="E:CalculationWorks.NonCommercial.ViewModel.Forms.BcfViewManager.EventsReleaseStart">
+            <summary>
+            Occurs when events release starts.
+            </summary>
+        </member>
+        <member name="E:CalculationWorks.NonCommercial.ViewModel.Forms.BcfViewManager.EventsReleaseEnd">
+            <summary>
+            Occurs when events release ended.
+            </summary>
+        </member>
+        <member name="P:CalculationWorks.NonCommercial.ViewModel.Forms.BcfViewManager.ProcessingDataSetChanges">
+            <summary>
+            Gets a value indicating whether currently processing dataset changes.
+            </summary>
+            <value><c>true</c> if currently processing dataset changes; otherwise, <c>false</c>.</value>
+            <remarks>
+            <para><c>ProcessingDataSetChanges</c> is true while:
+            <list type="bullet">
+            <item><see cref="T:CalculationWorks.NonCommercial.ViewModel.Forms.BcfViewManager"/> creates its <see cref="P:CalculationWorks.NonCommercial.ViewModel.Forms.BcfViewManager.DefaultViews"/></item>
+            <item><see cref="T:CalculationWorks.NonCommercial.ViewModel.Forms.BcfViewManager"/> processes currently change events from its underlying <see cref="T:CalculationWorks.NonCommercial.BusinessModel.BcfDataSet"/></item>
+            </list>
+            </para>
+            <para>
+            Update process works when a <see cref="T:CalculationWorks.NonCommercial.BusinessModel.BcfTransaction"/> (not a subtransaction) commits or <see cref="M:CalculationWorks.NonCommercial.BusinessModel.BcfDataSet.Undo"/> or <see cref="M:CalculationWorks.NonCommercial.BusinessModel.BcfDataSet.Redo"/> is called
+            <list type="bullet">
+            <item><see cref="T:CalculationWorks.NonCommercial.BusinessModel.BcfDataSet"/> raises its <see cref="E:CalculationWorks.NonCommercial.BusinessModel.BcfDataSet.EventsReleaseStart"/>.</item>
+            <item><c>ViewManager</c> sets its <see cref="P:CalculationWorks.NonCommercial.ViewModel.Forms.BcfViewManager.ProcessingDataSetChanges"/> to <c>true</c>.</item>
+            <item><c>ViewManager</c> raises its <see cref="E:CalculationWorks.NonCommercial.ViewModel.Forms.BcfViewManager.EventsReleaseStart"/>.</item>
+            <item><see cref="T:CalculationWorks.NonCommercial.BusinessModel.BcfDataSet"/> sets its <see cref="P:CalculationWorks.NonCommercial.BusinessModel.BcfDataSet.ReleasingEvents"/> to <c>true</c>.</item>
+            <item><see cref="T:CalculationWorks.NonCommercial.BusinessModel.BcfDataSet"/> releases deferred change events <see cref="T:CalculationWorks.NonCommercial.BusinessModel.BcfCell"/>.<see cref="E:CalculationWorks.NonCommercial.BusinessModel.BcfCell.ValueChanged"/>, <see cref="T:CalculationWorks.NonCommercial.BusinessModel.BcfRelatedRowCell"/>.<see cref="E:CalculationWorks.NonCommercial.BusinessModel.BcfRelatedRowCell.RelatedRowChanged"/>, <see cref="T:CalculationWorks.NonCommercial.BusinessModel.BcfRow"/>.<see cref="E:CalculationWorks.NonCommercial.BusinessModel.BcfRow.CellChanged"/> and <see cref="T:CalculationWorks.NonCommercial.BusinessModel.BcfRowCollection"/>.<see cref="E:CalculationWorks.NonCommercial.BusinessModel.BcfRowCollection.RowCollectionChanged"/></item>
+            <item><c>ViewManager</c> processes change events; some are temporary queued.</item>
+            <item><see cref="T:CalculationWorks.NonCommercial.BusinessModel.BcfDataSet"/> raises <see cref="E:CalculationWorks.NonCommercial.BusinessModel.BcfDataSet.EventsReleaseEnd"/>.</item>
+            <item><c>ViewManager</c> sets its <see cref="P:CalculationWorks.NonCommercial.ViewModel.Forms.BcfViewManager.ProcessingDataSetChanges"/> to false.</item>
+            <item><c>ViewManager</c> processes the temporary queued changes.</item>
+            <item><c>ViewManager</c> raises its <see cref="E:CalculationWorks.NonCommercial.ViewModel.Forms.BcfViewManager.EventsReleaseEnd"/>.</item>
+            <item><see cref="T:CalculationWorks.NonCommercial.BusinessModel.BcfDataSet"/> sets its <see cref="P:CalculationWorks.NonCommercial.BusinessModel.BcfDataSet.ReleasingEvents"/> to false.</item>
+            </list>
+            </para>
+            </remarks>
+        </member>
+        <member name="P:CalculationWorks.NonCommercial.ViewModel.Forms.BcfViewManager.DeferPropertyChanged">
+            <summary>
+            Gets a value indicating whether <see cref="E:CalculationWorks.NonCommercial.ViewModel.Forms.BcfRowView.ItemChanged"/> or <see cref="E:CalculationWorks.NonCommercial.ViewModel.Forms.BcfRowView.PropertyChanged"/> should be deferred.
+            </summary>
+            <value><c>true</c> if events should be deferred; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="P:CalculationWorks.NonCommercial.ViewModel.Forms.BcfViewManager.Disposing">
+            <summary>
+            Gets a value indicating whether this <see cref="T:CalculationWorks.NonCommercial.ViewModel.Forms.BcfViewManager"/> is disposing.
+            </summary>
+            <value><c>true</c> if disposing; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="E:CalculationWorks.NonCommercial.ViewModel.Forms.BcfViewManager.IgnoreRecurrentDataChange">
+            <summary>
+            Occurs when an recurrent data change occurs.
+            </summary>
+            <remarks>
+            Modifying data while releasing datasets change events is a serious conflict.
+            </remarks>
+        </member>
+        <member name="T:CalculationWorks.NonCommercial.ViewModel.Forms.BcfCommonRowView">
+            <summary>
+            Common row view class with IDataErrorInfo implementation.
+            </summary>
+        </member>
+        <member name="M:CalculationWorks.NonCommercial.ViewModel.Forms.BcfCommonRowView.#ctor(CalculationWorks.NonCommercial.ViewModel.Forms.BcfRowViewBuilder)">
+            <summary>
+            Initializes a new instance of the <see cref="T:CalculationWorks.NonCommercial.ViewModel.Forms.BcfCommonRowView"/> class.
+            </summary>
+            <param name="builder">The builder.</param>
+        </member>
+        <member name="T:CalculationWorks.NonCommercial.ViewModel.Forms.BcfCommonTableView">
+            <summary>
+            Default implementation of row view collection class for untyped table views. This class cannot be inherited.
+            </summary>
+        </member>
+        <member name="M:CalculationWorks.NonCommercial.ViewModel.Forms.BcfCommonTableView.#ctor(CalculationWorks.NonCommercial.ViewModel.Forms.BcfTableViewBuilder)">
+            <summary>
+            Initializes a new instance of the <see cref="T:CalculationWorks.NonCommercial.ViewModel.Forms.BcfCommonTableView"/> class.
+            </summary>
+            <param name="builder">The builder.</param>
+        </member>
+        <member name="M:CalculationWorks.NonCommercial.ViewModel.Forms.BcfCommonTableView.CreateRowView(CalculationWorks.NonCommercial.ViewModel.Forms.BcfRowViewBuilder)">
+            <summary>
+            Creates the <see cref="T:CalculationWorks.NonCommercial.ViewModel.Forms.BcfCommonRowView"/>.
+            </summary>
+            <param name="rowViewBuilder">The row view builder.</param>
+            <returns>BcfDefaultRowView.</returns>
+        </member>
+        <member name="T:CalculationWorks.NonCommercial.ViewModel.Forms.BcfListSortComparer`1">
+            <summary>
+            Infrastructure. The type supports the infrastructure and is not intended to be used directly from your code.
+            </summary>
+            <typeparam name="T">Item type</typeparam>
+        </member>
+        <member name="M:CalculationWorks.NonCommercial.ViewModel.Forms.BcfListSortComparer`1.#ctor(System.ComponentModel.ListSortDescriptionCollection)">
+            <summary>
+            Initializes a new instance of the <see cref="T:CalculationWorks.NonCommercial.ViewModel.Forms.BcfListSortComparer`1"/> class.
+            </summary>
+            <param name="sorts">The sorts.</param>
+        </member>
+        <member name="M:CalculationWorks.NonCommercial.ViewModel.Forms.BcfListSortComparer`1.Compare(`0,`0)">
+            <summary>
+            Compares the specified x an y.
+            </summary>
+            <param name="x">The x.</param>
+            <param name="y">The y.</param>
+            <returns>System.Int32.</returns>
+        </member>
+        <member name="T:CalculationWorks.NonCommercial.ViewModel.Forms.BcfHierarchicalViewManager">
+            <summary>
+            An extended view manager with capabilities for hierarchical data binding, row navigation and navigation history.
+            </summary>
+        </member>
+        <member name="M:CalculationWorks.NonCommercial.ViewModel.Forms.BcfHierarchicalViewManager.#ctor(CalculationWorks.NonCommercial.BusinessModel.BcfDataSet)">
+            <summary>
+            Initializes a new instance of the <see cref="T:CalculationWorks.NonCommercial.ViewModel.Forms.BcfHierarchicalViewManager"/> class.
+            </summary>
+            <param name="dataSet">The BcfDataSet.</param>
+        </member>
+        <member name="M:CalculationWorks.NonCommercial.ViewModel.Forms.BcfHierarchicalViewManager.#ctor(CalculationWorks.NonCommercial.BusinessModel.BcfDataSet,CalculationWorks.NonCommercial.ViewModel.Forms.BcfTableViewFactory)">
+            <summary>
+            Initializes a new instance of the <see cref="T:CalculationWorks.NonCommercial.ViewModel.Forms.BcfHierarchicalViewManager"/> class.
+            </summary>
+            <param name="dataSet">The BcfDataSet.</param>
+            <param name="tableViewFactory">The table view factory.</param>
+        </member>
+        <member name="M:CalculationWorks.NonCommercial.ViewModel.Forms.BcfHierarchicalViewManager.Dispose(System.Boolean)">
+            <summary>
+            Releases unmanaged and - optionally - managed resources.
+            </summary>
+            <param name="disposing"><c>true</c> to release both managed and unmanaged resources; <c>false</c> to release only unmanaged resources.</param>
+        </member>
+        <member name="M:CalculationWorks.NonCommercial.ViewModel.Forms.BcfHierarchicalViewManager.AddRootBindingSource``1(System.String,System.String,System.Func{CalculationWorks.NonCommercial.ViewModel.Forms.BcfBindingSourceBuilder,``0})">
+            <summary>
+            Creates and registers a new binding source.
+            </summary>
+            <typeparam name="TBindingSource">The type of the binding source.</typeparam>
+            <param name="name">The name.</param>
+            <param name="tableName">Name of the table.</param>
+            <param name="createBindingSource">TBindingSource constructor.</param>
+            <returns>TBindingSource.</returns>
+            <exception cref="T:System.ArgumentNullException">name is null</exception>
+            <exception cref="T:System.ArgumentNullException">tableName is null</exception>
+            <exception cref="T:System.ArgumentNullException">createBindingSource is null</exception>
+            <exception cref="T:System.ArgumentException">tableName is not in <see cref="P:CalculationWorks.NonCommercial.ViewModel.Forms.BcfViewManager.DefaultViews"/></exception>
+            <exception cref="T:System.ArgumentException">name is not unique</exception>
+        </member>
+        <member name="M:CalculationWorks.NonCommercial.ViewModel.Forms.BcfHierarchicalViewManager.AddBranchBindingSource``1(System.String,CalculationWorks.NonCommercial.ViewModel.Forms.BcfBindingSource,System.String,System.Func{CalculationWorks.NonCommercial.ViewModel.Forms.BcfBindingSourceBuilder,``0})">
+            <summary>
+            Creates a new binding source and adds it to the specified parents <see cref="P:CalculationWorks.NonCommercial.ViewModel.Forms.BcfBindingSource.ChildBindingSources"/>.
+            </summary>
+            <typeparam name="TBindingSource">The type of the binding source.</typeparam>
+            <param name="name">The name.</param>
+            <param name="parent">The parent BcfBindingSource.</param>
+            <param name="relationName">Name of the relation.</param>
+            <param name="createBindingSource">TBindingSource constructor.</param>
+            <returns>TBindingSource.</returns>
+            <exception cref="T:System.ArgumentNullException">name is null</exception>
+            <exception cref="T:System.ArgumentNullException">parent is null</exception>
+            <exception cref="T:System.ArgumentNullException">relationName is null</exception>
+            <exception cref="T:System.ArgumentNullException">createBindingSource is null</exception>
+            <exception cref="T:System.ArgumentException">parent not registered in this <see cref="T:CalculationWorks.NonCommercial.ViewModel.Forms.BcfHierarchicalViewManager"/></exception>
+            <exception cref="T:System.ArgumentException">relationName is not in tables parent relations</exception>
+            <exception cref="T:System.ArgumentException">name is not unique</exception>
+        </member>
+        <member name="M:CalculationWorks.NonCommercial.ViewModel.Forms.BcfHierarchicalViewManager.RemoveBindingSource(CalculationWorks.NonCommercial.ViewModel.Forms.BcfBindingSource)">
+            <summary>
+            Removes the binding source.
+            </summary>
+            <param name="bindingSource">The binding source.</param>
+            <exception cref="T:System.ArgumentNullException">bindingSource is null</exception>
+        </member>
+        <member name="M:CalculationWorks.NonCommercial.ViewModel.Forms.BcfHierarchicalViewManager.ClearNavigationHistory">
+            <summary>
+            Clears the navigation history.
+            </summary>
+        </member>
+        <member name="M:CalculationWorks.NonCommercial.ViewModel.Forms.BcfHierarchicalViewManager.PerformNavigation(System.Action)">
+            <summary>
+            Performs the navigation.
+            </summary>
+            <param name="navigateAction">The navigate action.</param>
+            <exception cref="T:System.ArgumentNullException">navigateAction</exception>
+        </member>
+        <member name="M:CalculationWorks.NonCommercial.ViewModel.Forms.BcfHierarchicalViewManager.OnNavigated(CalculationWorks.NonCommercial.ViewModel.Forms.BcfViewManagerNavigatedEventArgs)">
+            <summary>
+            Raises the <see cref="E:CalculationWorks.NonCommercial.ViewModel.Forms.BcfHierarchicalViewManager.Navigated"/> event.
+            </summary>
+            <param name="e">The <see cref="T:CalculationWorks.NonCommercial.ViewModel.Forms.BcfViewManagerNavigatedEventArgs"/> instance containing the event data.</param>
+        </member>
+        <member name="M:CalculationWorks.NonCommercial.ViewModel.Forms.BcfHierarchicalViewManager.CanNavigateForward">
+            <summary>
+            Determines whether can navigate forward.
+            </summary>
+            <returns><c>true</c> if can navigate forward; otherwise, <c>false</c>.</returns>
+        </member>
+        <member name="M:CalculationWorks.NonCommercial.ViewModel.Forms.BcfHierarchicalViewManager.NavigateForward">
+            <summary>
+            Navigates forward.
+            </summary>
+        </member>
+        <member name="M:CalculationWorks.NonCommercial.ViewModel.Forms.BcfHierarchicalViewManager.CanNavigateBackward">
+            <summary>
+            Determines whether can navigate backward.
+            </summary>
+            <returns><c>true</c> if can navigate backward; otherwise, <c>false</c>.</returns>
+        </member>
+        <member name="M:CalculationWorks.NonCommercial.ViewModel.Forms.BcfHierarchicalViewManager.NavigateBackward">
+            <summary>
+            Navigates backward.
+            </summary>
+        </member>
+        <member name="M:CalculationWorks.NonCommercial.ViewModel.Forms.BcfHierarchicalViewManager.OnViewStateCollect(CalculationWorks.NonCommercial.ViewModel.Forms.BcfViewStateEventArgs)">
+            <summary>
+            Raises the <see cref="E:CalculationWorks.NonCommercial.ViewModel.Forms.BcfHierarchicalViewManager.ViewStateCollect"/> event.
+            </summary>
+            <param name="e">The <see cref="T:CalculationWorks.NonCommercial.ViewModel.Forms.BcfViewStateEventArgs"/> instance containing the event data.</param>
+        </member>
+        <member name="M:CalculationWorks.NonCommercial.ViewModel.Forms.BcfHierarchicalViewManager.OnViewStateRestore(CalculationWorks.NonCommercial.ViewModel.Forms.BcfViewStateEventArgs)">
+            <summary>
+            Raises the <see cref="E:CalculationWorks.NonCommercial.ViewModel.Forms.BcfHierarchicalViewManager.ViewStateRestore"/> event.
+            </summary>
+            <param name="e">The <see cref="T:CalculationWorks.NonCommercial.ViewModel.Forms.BcfViewStateEventArgs"/> instance containing the event data.</param>
+        </member>
+        <member name="M:CalculationWorks.NonCommercial.ViewModel.Forms.BcfHierarchicalViewManager.CreateNavigationStateRecord">
+            <summary>
+            Creates the navigation state record.
+            </summary>
+            <returns>BcfNavigationStateRecord.</returns>
+        </member>
+        <member name="M:CalculationWorks.NonCommercial.ViewModel.Forms.BcfHierarchicalViewManager.RestoreNavigationStateRecord(CalculationWorks.NonCommercial.ViewModel.Forms.BcfNavigationStateRecord)">
+            <summary>
+            Restores the navigation state record.
+            </summary>
+            <param name="record">The record.</param>
+        </member>
+        <member name="M:CalculationWorks.NonCommercial.ViewModel.Forms.BcfHierarchicalViewManager.NavigateTo(CalculationWorks.NonCommercial.BusinessModel.BcfRow)">
+            <summary>
+            Sets the given row as current row.
+            </summary>
+            <param name="destinationRow">The destination row.</param>
+            <returns><c>true</c> if at least one <see cref="T:CalculationWorks.NonCommercial.ViewModel.Forms.BcfBindingSource"/> was adjusted, <c>false</c> otherwise.</returns>
+        </member>
+        <member name="M:CalculationWorks.NonCommercial.ViewModel.Forms.BcfHierarchicalViewManager.GetRelatedCurrencyManager(System.String)">
+            <summary>
+            Gets the <see cref="T:System.Windows.Forms.CurrencyManager"/> for this <see cref="T:System.Windows.Forms.ICurrencyManagerProvider"/> and the specified data member.
+            </summary>
+            <param name="dataMember">The name of the column or list, within the data source, to obtain the <see cref="T:System.Windows.Forms.CurrencyManager"/> for.</param>
+            <returns>The <see cref="T:System.Windows.Forms.CurrencyManager"/> for this <see cref="T:System.Windows.Forms.ICurrencyManagerProvider"/> and the specified data member.</returns>
+            <exception cref="T:System.ArgumentException">given dataMember is unknown</exception>
+        </member>
+        <member name="M:CalculationWorks.NonCommercial.ViewModel.Forms.BcfHierarchicalViewManager.CanRestoreNavigationState(CalculationWorks.NonCommercial.ViewModel.Forms.Navigation.BcfNavigationHelperDataSet)">
+            <summary>
+            Determines whether at lease one entry in <c>preview</c> can be restored.
+            </summary>
+            <param name="preview">The preview.</param>
+            <returns><c>true</c> if t lease one entry in <c>preview</c> can be restored; otherwise, <c>false</c>.</returns>
+            <exception cref="T:System.ArgumentNullException">preview is <c>null</c></exception>
+        </member>
+        <member name="M:CalculationWorks.NonCommercial.ViewModel.Forms.BcfHierarchicalViewManager.NavigationStatePreviewEqualsCurrent(CalculationWorks.NonCommercial.ViewModel.Forms.Navigation.BcfNavigationHelperDataSet,System.Collections.Generic.List{System.Object})">
+            <summary>
+            Indicates whether the historical view state equals current.
+            </summary>
+            <param name="preview">The preview.</param>
+            <param name="currentViewState">State of the current view.</param>
+            <returns><c>true</c> the historical view state equals current, <c>false</c> otherwise.</returns>
+            <exception cref="T:System.ArgumentNullException">preview is <c>null</c></exception>
+            <exception cref="T:System.ArgumentNullException">currentViewState is <c>null</c></exception>
+        </member>
+        <member name="M:CalculationWorks.NonCommercial.ViewModel.Forms.BcfHierarchicalViewManager.UpdateNavigationPreview(CalculationWorks.NonCommercial.ViewModel.Forms.Navigation.BcfNavigationHelperDataSet,System.Collections.Generic.IEnumerable{CalculationWorks.NonCommercial.BusinessModel.UndoRedo.IBcfUndoRedoItem},System.Boolean)">
+            <summary>
+            Updates the navigation preview.
+            </summary>
+            <param name="preview">The preview.</param>
+            <param name="navigationChangeItems">The navigation change items.</param>
+            <param name="forward">if set to <c>true</c> navigation is forward; else backward.</param>
+            <exception cref="T:System.ArgumentNullException">
+            preview
+            or
+            navigationChangeItems
+            </exception>
+        </member>
+        <member name="P:CalculationWorks.NonCommercial.ViewModel.Forms.BcfHierarchicalViewManager.NavigationTrackingEnabled">
+            <summary>
+            Gets or sets a value indicating whether navigation tracking is enabled.
+            </summary>
+            <value><c>true</c> if navigation tracking is enabled; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="E:CalculationWorks.NonCommercial.ViewModel.Forms.BcfHierarchicalViewManager.Navigated">
+            <summary>
+            Occurs when navigated.
+            </summary>
+        </member>
+        <member name="E:CalculationWorks.NonCommercial.ViewModel.Forms.BcfHierarchicalViewManager.ViewStateCollect">
+            <summary>
+            Occurs when view state collection is required.
+            </summary>
+        </member>
+        <member name="E:CalculationWorks.NonCommercial.ViewModel.Forms.BcfHierarchicalViewManager.ViewStateRestore">
+            <summary>
+            Occurs when view state has to be restored.
+            </summary>
+        </member>
+        <member name="P:CalculationWorks.NonCommercial.ViewModel.Forms.BcfHierarchicalViewManager.Navigating">
+            <summary>
+            Gets a value indicating whether this <see cref="T:CalculationWorks.NonCommercial.ViewModel.Forms.BcfHierarchicalViewManager"/> is navigating.
+            </summary>
+            <value><c>true</c> if navigating; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="P:CalculationWorks.NonCommercial.ViewModel.Forms.BcfHierarchicalViewManager.BindingSources">
+            <summary>
+            Gets the binding sources.
+            </summary>
+            <value>The binding sources.</value>
+        </member>
+        <member name="P:CalculationWorks.NonCommercial.ViewModel.Forms.BcfHierarchicalViewManager.CurrencyManager">
+            <summary>
+            Gets the <see cref="T:System.Windows.Forms.CurrencyManager" /> associated with this <see cref="T:System.Windows.Forms.ICurrencyManagerProvider" />. 
+            </summary>
+            <value>The currency manager.</value>
+            <returns>The <see cref="T:System.Windows.Forms.CurrencyManager" /> associated with this <see cref="T:System.Windows.Forms.ICurrencyManagerProvider" />.</returns>
+        </member>
+        <member name="P:CalculationWorks.NonCommercial.ViewModel.Forms.BcfHierarchicalViewManager.RestoringNavigationState">
+            <summary>
+            Gets a value indicating whether [restoring navigation state].
+            </summary>
+            <value><c>true</c> if [restoring navigation state]; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="P:CalculationWorks.NonCommercial.ViewModel.Forms.BcfHierarchicalViewManager.NavigationRepository">
+            <summary>
+            Gets the navigation repository.
+            </summary>
+            <value>The navigation repository.</value>
+        </member>
+        <member name="T:CalculationWorks.NonCommercial.ViewModel.Forms.BcfNavigationState">
+            <summary>
+            Represents the navigation state of an individual <see cref="T:CalculationWorks.NonCommercial.ViewModel.Forms.BcfBindingSource"/> object.
+            </summary>
+        </member>
+        <member name="P:CalculationWorks.NonCommercial.ViewModel.Forms.BcfNavigationState.RowView">
+            <summary>
+            Gets or sets the row view.
+            </summary>
+            <value>The row view.</value>
+        </member>
+        <member name="P:CalculationWorks.NonCommercial.ViewModel.Forms.BcfNavigationState.Row">
+            <summary>
+            Gets or sets the row.
+            </summary>
+            <value>The row.</value>
+        </member>
+        <member name="P:CalculationWorks.NonCommercial.ViewModel.Forms.BcfNavigationState.BindingSource">
+            <summary>
+            Gets or sets the binding source.
+            </summary>
+            <value>The binding source.</value>
+        </member>
+        <member name="T:CalculationWorks.NonCommercial.ViewModel.Forms.BcfNavigationStateRecord">
+            <summary>
+            Represents the navigation state of an individual <see cref="T:CalculationWorks.NonCommercial.ViewModel.Forms.BcfHierarchicalViewManager"/> object and custom view(<see cref="T:System.Windows.Forms.Control"/>) state.
+            </summary>
+        </member>
+        <member name="M:CalculationWorks.NonCommercial.ViewModel.Forms.BcfNavigationStateRecord.#ctor(System.Collections.Generic.List{System.Object},CalculationWorks.NonCommercial.ViewModel.Forms.BcfNavigationState[])">
+            <summary>
+            Initializes a new instance of the <see cref="T:CalculationWorks.NonCommercial.ViewModel.Forms.BcfNavigationStateRecord"/> class.
+            </summary>
+            <param name="viewState">State of the view.</param>
+            <param name="navigationStates">The navigation states.</param>
+        </member>
+        <member name="P:CalculationWorks.NonCommercial.ViewModel.Forms.BcfNavigationStateRecord.ViewState">
+            <summary>
+            Gets an <see cref="T:System.Collections.Generic.List`1"/> to place custom view state information inside or restore.
+            </summary>
+            <value>The custom view state list.</value>
+        </member>
+        <member name="P:CalculationWorks.NonCommercial.ViewModel.Forms.BcfNavigationStateRecord.NavigationStates">
+            <summary>
+            Gets the navigation states of the <see cref="T:CalculationWorks.NonCommercial.ViewModel.Forms.BcfHierarchicalViewManager"/> binding sources.
+            </summary>
+            <value>The navigation states.</value>
+        </member>
+        <member name="T:CalculationWorks.NonCommercial.ViewModel.Forms.BcfValidatorResultTableView">
+            <summary>
+            Default implementation of a validator issue list.
+            </summary>
+        </member>
+        <member name="T:CalculationWorks.NonCommercial.ViewModel.Forms.BcfValidatorResultTableView`1">
+            <summary>
+            Generic base class for validator issue lists.
+            </summary>
+            <typeparam name="TValidatorResultView">The type of the t validator result data view.</typeparam>
+        </member>
+        <member name="M:CalculationWorks.NonCommercial.ViewModel.Forms.BcfValidatorResultTableView`1.#ctor(CalculationWorks.NonCommercial.ViewModel.Forms.BcfViewManager,System.Func{CalculationWorks.NonCommercial.BusinessModel.BcfValidatorResult,System.Boolean})">
+            <summary>
+            Initializes a new instance of the <see cref="T:CalculationWorks.NonCommercial.ViewModel.Forms.BcfValidatorResultTableView`1"/> class.
+            </summary>
+            <param name="viewManager">The view manager.</param>
+            <param name="filterFunction">The filter function.</param>
+            <exception cref="T:System.ArgumentNullException">viewManager</exception>
+        </member>
+        <member name="M:CalculationWorks.NonCommercial.ViewModel.Forms.BcfValidatorResultTableView`1.CreateValidatorResultView(CalculationWorks.NonCommercial.BusinessModel.BcfValidatorResult)">
+            <summary>
+            Creates the validator result data view.
+            </summary>
+            <param name="result">The result.</param>
+            <returns>TValidatorResultView.</returns>
+        </member>
+        <member name="M:CalculationWorks.NonCommercial.ViewModel.Forms.BcfValidatorResultTableView`1.ApplySortCore(System.ComponentModel.PropertyDescriptor,System.ComponentModel.ListSortDirection)">
+            <summary>
+            Applies the sort.
+            </summary>
+            <param name="prop">The property.</param>
+            <param name="direction">The direction.</param>
+        </member>
+        <member name="M:CalculationWorks.NonCommercial.ViewModel.Forms.BcfValidatorResultTableView`1.RemoveSortCore">
+            <summary>
+            Removes the sort.
+            </summary>
+        </member>
+        <member name="M:CalculationWorks.NonCommercial.ViewModel.Forms.BcfValidatorResultTableView`1.ApplyFilter">
+            <summary>
+            Applies the filter.
+            </summary>
+        </member>
+        <member name="M:CalculationWorks.NonCommercial.ViewModel.Forms.BcfValidatorResultTableView`1.GetViewManager">
+            <summary>
+            Gets the BcfViewManager.
+            </summary>
+            <returns>BcfViewManager.</returns>
+        </member>
+        <member name="M:CalculationWorks.NonCommercial.ViewModel.Forms.BcfValidatorResultTableView`1.Dispose">
+            <summary>
+            Performs application-defined tasks associated with freeing, releasing, or resetting unmanaged resources. 
+            </summary>
+        </member>
+        <member name="M:CalculationWorks.NonCommercial.ViewModel.Forms.BcfValidatorResultTableView`1.Dispose(System.Boolean)">
+            <summary>
+            Releases unmanaged and - optionally - managed resources.
+            </summary>
+            <param name="disposing"><c>true</c> to release both managed and unmanaged resources; <c>false</c> to release only unmanaged resources.</param>
+        </member>
+        <member name="M:CalculationWorks.NonCommercial.ViewModel.Forms.BcfValidatorResultTableView`1.ApplySort(System.ComponentModel.ListSortDescriptionCollection)">
+            <summary>
+            Sorts the data source based on the given <see cref="T:System.ComponentModel.ListSortDescriptionCollection" />.
+            </summary>
+            <param name="sorts">The <see cref="T:System.ComponentModel.ListSortDescriptionCollection" /> currently applied to the data source.</param>
+        </member>
+        <member name="P:CalculationWorks.NonCommercial.ViewModel.Forms.BcfValidatorResultTableView`1.IsSortedCore">
+            <summary>
+            Gets a value indicating whether this instance is sorted.
+            </summary>
+            <value><c>true</c> if this instance is sorted; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="P:CalculationWorks.NonCommercial.ViewModel.Forms.BcfValidatorResultTableView`1.SortDescriptions">
+            <summary>
+            Gets the collection of sort descriptions currently applied to the data source.
+            </summary>
+            <value>The sort descriptions.</value>
+            <returns>The <see cref="T:System.ComponentModel.ListSortDescriptionCollection" /> currently applied to the data source.</returns>
+        </member>
+        <member name="M:CalculationWorks.NonCommercial.ViewModel.Forms.BcfValidatorResultTableView.#ctor(CalculationWorks.NonCommercial.ViewModel.Forms.BcfViewManager,System.Func{CalculationWorks.NonCommercial.BusinessModel.BcfValidatorResult,System.Boolean})">
+            <summary>
+            Initializes a new instance of the <see cref="T:CalculationWorks.NonCommercial.ViewModel.Forms.BcfValidatorResultTableView"/> class.
+            </summary>
+            <param name="viewManager">The view manager.</param>
+            <param name="filterFunction">The filter function.</param>
+        </member>
+        <member name="M:CalculationWorks.NonCommercial.ViewModel.Forms.BcfValidatorResultTableView.CreateValidatorResultView(CalculationWorks.NonCommercial.BusinessModel.BcfValidatorResult)">
+            <summary>
+            Creates the validator result data view.
+            </summary>
+            <param name="result">The result.</param>
+            <returns>BcfValidatorResultView.</returns>
+        </member>
+        <member name="T:CalculationWorks.NonCommercial.ViewModel.Forms.BcfViewStateEventArgs">
+            <summary>
+            Represents additional information to collect or restore view state.
+            </summary>
+        </member>
+        <member name="M:CalculationWorks.NonCommercial.ViewModel.Forms.BcfViewStateEventArgs.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:CalculationWorks.NonCommercial.ViewModel.Forms.BcfViewStateEventArgs"/> class.
+            </summary>
+        </member>
+        <member name="M:CalculationWorks.NonCommercial.ViewModel.Forms.BcfViewStateEventArgs.#ctor(System.Collections.Generic.List{System.Object})">
+            <summary>
+            Initializes a new instance of the <see cref="T:CalculationWorks.NonCommercial.ViewModel.Forms.BcfViewStateEventArgs"/> class.
+            </summary>
+            <param name="viewState">State of the view.</param>
+            <exception cref="T:System.ArgumentNullException">viewState</exception>
+        </member>
+        <member name="P:CalculationWorks.NonCommercial.ViewModel.Forms.BcfViewStateEventArgs.ViewState">
+            <summary>
+            Gets an <see cref="T:System.Collections.Generic.List`1"/> to place custom view state information inside or restore.
+            </summary>
+            <value>The custom view state list.</value>
+        </member>
+        <member name="T:CalculationWorks.NonCommercial.ViewModel.Forms.BcfColumnPropertyDescriptor">
+            <summary>
+            Infrastructure. The type supports the infrastructure and is not intended to be used directly from your code. This class cannot be inherited.
+            </summary>
+        </member>
+        <member name="M:CalculationWorks.NonCommercial.ViewModel.Forms.BcfColumnPropertyDescriptor.CanResetValue(System.Object)">
+            <summary>
+            When overridden in a derived class, returns whether resetting an object changes its value.
+            </summary>
+            <param name="component">The component to test for reset capability. </param>
+            <returns><c>true</c>  if resetting the component changes its value; otherwise, <c>false</c>.</returns>
+            <exception cref="T:System.ArgumentNullException">component</exception>
+        </member>
+        <member name="F:CalculationWorks.NonCommercial.ViewModel.Forms.BcfColumnPropertyDescriptor.LastGetMember">
+            <summary>
+            The last get member
+            </summary>
+        </member>
+        <member name="F:CalculationWorks.NonCommercial.ViewModel.Forms.BcfColumnPropertyDescriptor.LastSetMember">
+            <summary>
+            The last set member
+            </summary>
+        </member>
+        <member name="M:CalculationWorks.NonCommercial.ViewModel.Forms.BcfColumnPropertyDescriptor.GetValue(System.Object)">
+            <summary>
+            When overridden in a derived class, gets the current value of the property on a component. 
+            </summary>
+            <param name="component">The component with the property for which to retrieve the value. </param>
+            <returns>The value of a property for a given component.</returns>
+            <exception cref="T:System.ArgumentNullException">component</exception>
+        </member>
+        <member name="M:CalculationWorks.NonCommercial.ViewModel.Forms.BcfColumnPropertyDescriptor.ResetValue(System.Object)">
+            <summary>
+            When overridden in a derived class, resets the value for this property of the component to the default value. 
+            </summary>
+            <param name="component">The component with the property value that is to be reset to the default value. </param>
+        </member>
+        <member name="M:CalculationWorks.NonCommercial.ViewModel.Forms.BcfColumnPropertyDescriptor.SetValue(System.Object,System.Object)">
+            <summary>
+            When overridden in a derived class, sets the value of the component to a different value. 
+            </summary>
+            <param name="component">The component with the property value that is to be set. </param>
+            <param name="value">The new value. </param>
+            <exception cref="T:System.ArgumentNullException">component</exception>
+        </member>
+        <member name="M:CalculationWorks.NonCommercial.ViewModel.Forms.BcfColumnPropertyDescriptor.ShouldSerializeValue(System.Object)">
+            <summary>
+            When overridden in a derived class, determines a value indicating whether the value of this property needs to be persisted. 
+            </summary>
+            <param name="component">The component with the property to be examined for persistence. </param>
+            <returns><c>true</c>  if the property should be persisted; otherwise, <c>false</c>.</returns>
+        </member>
+        <member name="P:CalculationWorks.NonCommercial.ViewModel.Forms.BcfColumnPropertyDescriptor.Column">
+            <summary>
+            Gets the column.
+            </summary>
+            <value>The column.</value>
+        </member>
+        <member name="P:CalculationWorks.NonCommercial.ViewModel.Forms.BcfColumnPropertyDescriptor.ComponentType">
+            <summary>
+            When overridden in a derived class, gets the type of the component this property is bound to.
+            </summary>
+            <value>The type of the component.</value>
+            <returns>A <see cref="T:System.Type" /> that represents the type of component this property is bound to. When the <see cref="M:System.ComponentModel.PropertyDescriptor.GetValue(System.Object)" /> or <see cref="M:System.ComponentModel.PropertyDescriptor.SetValue(System.Object,System.Object)" /> methods are invoked, the object specified might be an instance of this type. </returns>
+        </member>
+        <member name="P:CalculationWorks.NonCommercial.ViewModel.Forms.BcfColumnPropertyDescriptor.IsReadOnly">
+            <summary>
+            When overridden in a derived class, gets a value indicating whether this property is read-only. 
+            </summary>
+            <value><c>true</c> if this instance is read only; otherwise, <c>false</c>.</value>
+            <returns><c>true</c> if this instance is read only; otherwise, <c>false</c>.</returns>
+        </member>
+        <member name="P:CalculationWorks.NonCommercial.ViewModel.Forms.BcfColumnPropertyDescriptor.PropertyType">
+            <summary>
+            When overridden in a derived class, gets the type of the property. 
+            </summary>
+            <value>The type of the property.</value>
+            <returns>A <see cref="T:System.Type" /> that represents the type of the property.</returns>
+        </member>
+        <member name="T:CalculationWorks.NonCommercial.ViewModel.Forms.BcfChildViewPropertyDescriptor">
+            <summary>
+            Infrastructure. The type supports the infrastructure and is not intended to be used directly from your code. This class cannot be inherited.
+            </summary>
+        </member>
+        <member name="M:CalculationWorks.NonCommercial.ViewModel.Forms.BcfChildViewPropertyDescriptor.CanResetValue(System.Object)">
+            <summary>
+            When overridden in a derived class, returns whether resetting an object changes its value.
+            </summary>
+            <param name="component">The component to test for reset capability. </param>
+            <returns><c>true</c>  if resetting the component changes its value; otherwise, <c>false</c>.</returns>
+        </member>
+        <member name="M:CalculationWorks.NonCommercial.ViewModel.Forms.BcfChildViewPropertyDescriptor.GetValue(System.Object)">
+            <summary>
+            When overridden in a derived class, gets the current value of the property on a component. 
+            </summary>
+            <param name="component">The component with the property for which to retrieve the value. </param>
+            <returns>The value of a property for a given component.</returns>
+            <exception cref="T:System.ArgumentNullException">component</exception>
+        </member>
+        <member name="M:CalculationWorks.NonCommercial.ViewModel.Forms.BcfChildViewPropertyDescriptor.ResetValue(System.Object)">
+            <summary>
+            When overridden in a derived class, resets the value for this property of the component to the default value. 
+            </summary>
+            <param name="component">The component with the property value that is to be reset to the default value. </param>
+        </member>
+        <member name="M:CalculationWorks.NonCommercial.ViewModel.Forms.BcfChildViewPropertyDescriptor.SetValue(System.Object,System.Object)">
+            <summary>
+            When overridden in a derived class, sets the value of the component to a different value. 
+            </summary>
+            <param name="component">The component with the property value that is to be set. </param>
+            <param name="value">The new value. </param>
+        </member>
+        <member name="M:CalculationWorks.NonCommercial.ViewModel.Forms.BcfChildViewPropertyDescriptor.ShouldSerializeValue(System.Object)">
+            <summary>
+            When overridden in a derived class, determines a value indicating whether the value of this property needs to be persisted. 
+            </summary>
+            <param name="component">The component with the property to be examined for persistence. </param>
+            <returns><c>true</c>  if the property should be persisted; otherwise, <c>false</c>.</returns>
+        </member>
+        <member name="P:CalculationWorks.NonCommercial.ViewModel.Forms.BcfChildViewPropertyDescriptor.Relation">
+            <summary>
+            Gets the relation.
+            </summary>
+            <value>The relation.</value>
+        </member>
+        <member name="P:CalculationWorks.NonCommercial.ViewModel.Forms.BcfChildViewPropertyDescriptor.ComponentType">
+            <summary>
+            When overridden in a derived class, gets the type of the component this property is bound to.
+            </summary>
+            <value>The type of the component.</value>
+            <returns>A <see cref="T:System.Type" /> that represents the type of component this property is bound to. When the <see cref="M:System.ComponentModel.PropertyDescriptor.GetValue(System.Object)" /> or <see cref="M:System.ComponentModel.PropertyDescriptor.SetValue(System.Object,System.Object)" /> methods are invoked, the object specified might be an instance of this type. </returns>
+        </member>
+        <member name="P:CalculationWorks.NonCommercial.ViewModel.Forms.BcfChildViewPropertyDescriptor.IsReadOnly">
+            <summary>
+            When overridden in a derived class, gets a value indicating whether this property is read-only. 
+            </summary>
+            <value><c>true</c> if this instance is read only; otherwise, <c>false</c>.</value>
+            <returns><c>true</c> if this instance is read only; otherwise, <c>false</c>.</returns>
+        </member>
+        <member name="P:CalculationWorks.NonCommercial.ViewModel.Forms.BcfChildViewPropertyDescriptor.PropertyType">
+            <summary>
+            When overridden in a derived class, gets the type of the property. 
+            </summary>
+            <value>The type of the property.</value>
+            <returns>A <see cref="T:System.Type" /> that represents the type of the property.</returns>
+        </member>
+        <member name="T:CalculationWorks.NonCommercial.ViewModel.Forms.BcfTableViewPropertyDescriptor">
+            <summary>
+            Infrastructure. The type supports the infrastructure and is not intended to be used directly from your code. This class cannot be inherited.
+            </summary>
+        </member>
+        <member name="M:CalculationWorks.NonCommercial.ViewModel.Forms.BcfTableViewPropertyDescriptor.CanResetValue(System.Object)">
+            <summary>
+            When overridden in a derived class, returns whether resetting an object changes its value.
+            </summary>
+            <param name="component">The component to test for reset capability. </param>
+            <returns><c>true</c>  if resetting the component changes its value; otherwise, <c>false</c>.</returns>
+        </member>
+        <member name="M:CalculationWorks.NonCommercial.ViewModel.Forms.BcfTableViewPropertyDescriptor.GetValue(System.Object)">
+            <summary>
+            When overridden in a derived class, gets the current value of the property on a component. 
+            </summary>
+            <param name="component">The component with the property for which to retrieve the value. </param>
+            <returns>The value of a property for a given component.</returns>
+        </member>
+        <member name="M:CalculationWorks.NonCommercial.ViewModel.Forms.BcfTableViewPropertyDescriptor.ResetValue(System.Object)">
+            <summary>
+            When overridden in a derived class, resets the value for this property of the component to the default value. 
+            </summary>
+            <param name="component">The component with the property value that is to be reset to the default value. </param>
+        </member>
+        <member name="M:CalculationWorks.NonCommercial.ViewModel.Forms.BcfTableViewPropertyDescriptor.SetValue(System.Object,System.Object)">
+            <summary>
+            When overridden in a derived class, sets the value of the component to a different value. 
+            </summary>
+            <param name="component">The component with the property value that is to be set. </param>
+            <param name="value">The new value. </param>
+        </member>
+        <member name="M:CalculationWorks.NonCommercial.ViewModel.Forms.BcfTableViewPropertyDescriptor.ShouldSerializeValue(System.Object)">
+            <summary>
+            When overridden in a derived class, determines a value indicating whether the value of this property needs to be persisted. 
+            </summary>
+            <param name="component">The component with the property to be examined for persistence. </param>
+            <returns><c>true</c>  if the property should be persisted; otherwise, <c>false</c>.</returns>
+        </member>
+        <member name="P:CalculationWorks.NonCommercial.ViewModel.Forms.BcfTableViewPropertyDescriptor.TableView">
+            <summary>
+            Gets the table view.
+            </summary>
+            <value>The table view.</value>
+        </member>
+        <member name="P:CalculationWorks.NonCommercial.ViewModel.Forms.BcfTableViewPropertyDescriptor.ComponentType">
+            <summary>
+            When overridden in a derived class, gets the type of the component this property is bound to.
+            </summary>
+            <value>The type of the component.</value>
+            <returns>A <see cref="T:System.Type" /> that represents the type of component this property is bound to. When the <see cref="M:System.ComponentModel.PropertyDescriptor.GetValue(System.Object)" /> or <see cref="M:System.ComponentModel.PropertyDescriptor.SetValue(System.Object,System.Object)" /> methods are invoked, the object specified might be an instance of this type. </returns>
+        </member>
+        <member name="P:CalculationWorks.NonCommercial.ViewModel.Forms.BcfTableViewPropertyDescriptor.IsReadOnly">
+            <summary>
+            When overridden in a derived class, gets a value indicating whether this property is read-only. 
+            </summary>
+            <value><c>true</c> if this instance is read only; otherwise, <c>false</c>.</value>
+            <returns><c>true</c> if this instance is read only; otherwise, <c>false</c>.</returns>
+        </member>
+        <member name="P:CalculationWorks.NonCommercial.ViewModel.Forms.BcfTableViewPropertyDescriptor.PropertyType">
+            <summary>
+            When overridden in a derived class, gets the type of the property. 
+            </summary>
+            <value>The type of the property.</value>
+            <returns>A <see cref="T:System.Type" /> that represents the type of the property.</returns>
+        </member>
+        <member name="T:CalculationWorks.NonCommercial.ViewModel.Forms.BcfValidatorResultView">
+            <summary>
+            Represents an individual validator result inside a validator issue list.
+            </summary>
+        </member>
+        <member name="M:CalculationWorks.NonCommercial.ViewModel.Forms.BcfValidatorResultView.#ctor(CalculationWorks.NonCommercial.BusinessModel.BcfValidatorResult)">
+            <summary>
+            Initializes a new instance of the <see cref="T:CalculationWorks.NonCommercial.ViewModel.Forms.BcfValidatorResultView"/> class.
+            </summary>
+            <param name="validatorResult">The validator result.</param>
+            <exception cref="T:System.ArgumentNullException">validatorResult</exception>
+        </member>
+        <member name="M:CalculationWorks.NonCommercial.ViewModel.Forms.BcfValidatorResultView.GetValidatorResult">
+            <summary>
+            Gets the validator result.
+            </summary>
+            <returns>BcfValidatorResult.</returns>
+        </member>
+        <member name="M:CalculationWorks.NonCommercial.ViewModel.Forms.BcfValidatorResultView.Initialize">
+            <summary>
+            Initializes this instance.
+            </summary>
+        </member>
+        <member name="M:CalculationWorks.NonCommercial.ViewModel.Forms.BcfValidatorResultView.Cleanup">
+            <summary>
+            Cleanups this instance.
+            </summary>
+        </member>
+        <member name="M:CalculationWorks.NonCommercial.ViewModel.Forms.BcfValidatorResultView.GetCellsTagged">
+            <summary>
+            Gets the cells tagged.
+            </summary>
+            <returns>IEnumerable&lt;BcfCell&gt;.</returns>
+        </member>
+        <member name="M:CalculationWorks.NonCommercial.ViewModel.Forms.BcfValidatorResultView.GetValidator">
+            <summary>
+            Gets the validator.
+            </summary>
+            <returns>BcfValidatorBase.</returns>
+        </member>
+        <member name="M:CalculationWorks.NonCommercial.ViewModel.Forms.BcfValidatorResultView.GetValidatingRow">
+            <summary>
+            Gets the validating row.
+            </summary>
+            <returns>BcfRow.</returns>
+        </member>
+        <member name="M:CalculationWorks.NonCommercial.ViewModel.Forms.BcfValidatorResultView.GetValidatingTable">
+            <summary>
+            Gets the validating table.
+            </summary>
+            <returns>BcfTable.</returns>
+        </member>
+        <member name="M:CalculationWorks.NonCommercial.ViewModel.Forms.BcfValidatorResultView.GetValidatorCell">
+            <summary>
+            Gets the validator cell.
+            </summary>
+            <returns>BcfValidatorCell.</returns>
+        </member>
+        <member name="P:CalculationWorks.NonCommercial.ViewModel.Forms.BcfValidatorResultView.MessageText">
+            <summary>
+            Gets the message text.
+            </summary>
+            <value>The message text.</value>
+        </member>
+        <member name="T:CalculationWorks.NonCommercial.ViewModel.Forms.BcfViewManagerNavigatedEventArgs">
+            <summary>
+            Provides additional information for navigated events.
+            </summary>
+        </member>
+        <member name="P:CalculationWorks.NonCommercial.ViewModel.Forms.BcfViewManagerNavigatedEventArgs.Kind">
+            <summary>
+            Gets the kind.
+            </summary>
+            <value>The kind.</value>
+        </member>
+        <member name="T:CalculationWorks.NonCommercial.ViewModel.Forms.BcfViewManagerNavigation">
+            <summary>
+            Enum BcfViewManagerNavigation
+            </summary>
+        </member>
+        <member name="F:CalculationWorks.NonCommercial.ViewModel.Forms.BcfViewManagerNavigation.Normal">
+            <summary>
+            normal
+            </summary>
+        </member>
+        <member name="F:CalculationWorks.NonCommercial.ViewModel.Forms.BcfViewManagerNavigation.Restore">
+            <summary>
+            restore
+            </summary>
+        </member>
+        <member name="T:CalculationWorks.NonCommercial.ViewModel.Forms.NamespaceDoc">
+            <summary>
+            <para>CalculationWorks.ViewModel.Forms provides types supporting databinding for Windows Forms.</para>
+            </summary>
+        </member>
+        <member name="T:CalculationWorks.NonCommercial.ViewModel.Forms.Navigation.BcfNavigationHelperDataSet">
+            <summary>
+            Infrastructure. The type supports the infrastructure and is not intended to be used directly from your code.
+            </summary>
+        </member>
+        <member name="M:CalculationWorks.NonCommercial.ViewModel.Forms.Navigation.BcfNavigationHelperDataSet.ClearUndoRepository">
+            <summary>
+            Clears the undo repository.
+            </summary>
+        </member>
+        <member name="M:CalculationWorks.NonCommercial.ViewModel.Forms.Navigation.BcfNavigationHelperDataSet.RemoveLastUndoItem">
+            <summary>
+            Removes the last undo item.
+            </summary>
+        </member>
+        <member name="M:CalculationWorks.NonCommercial.ViewModel.Forms.Navigation.BcfNavigationHelperDataSet.RemoveLastRedoItem">
+            <summary>
+            Removes the last redo item.
+            </summary>
+        </member>
+    </members>
+</doc>

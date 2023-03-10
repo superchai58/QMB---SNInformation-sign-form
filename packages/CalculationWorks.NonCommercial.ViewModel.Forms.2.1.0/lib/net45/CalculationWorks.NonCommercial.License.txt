@@ -1,0 +1,210 @@
+[Translation below]
+
+Lizenzbestimmungen „CalculationWorks BCF NonCommercial Edition“
+(CalculationWorks NonCommercial License v1.1)
+
+Zwischen
+
+Hermann Jung, Viktor-Scheffel-Str.2, 99096 Erfurt
+Im Folgenden „Lizenzgeber“ genannt
+und
+
+Ihnen, als Person - oder Organisation in deren Auftrag Sie handeln, die die „CalculationWorks BCF NonCommercial Edition“ heruntergeladen oder den Lizenzgegenstand von einem Dritten durch Weitergabe erlangt hat.
+
+Im Folgenden „Lizenznehmer“ genannt
+
+Präambel
+
+Diese Vereinbarung regelt die Rechte und Pflichten zwischen dem Lizenznehmer und dem Lizenzgeber bezüglich des Lizenzgegenstandes „CalculationWorks BCF NonCommercial Edition“.
+Die Allgemeinen Geschäftsbedingungen des Lizenzgebers sind maßgeblicher Bestandteil dieser Vereinbarung.
+
+§1 Vertragsgegenstand
+I.
+Vertragsgegenstand sind die Einräumung von Nutzungsrechten und die dauerhafte Überlassung des vom Lizenzgeber entwickelten Produktes mit der Bezeichnung „CalculationWorks BCF NonCommercial Edition“ (nachfolgend bezeichnet als „Lizenzgegenstand“ oder „Software“) in der Version 1.0 bestehend aus:
+-	BCF Library
+-	BCF Editor.
+II.
+Der Lizenzgegenstand ist eine Sammlung von Komponenten und Tools, um komplexe wiederkehrende Problemstellungen im Zusammenhang mit der Implementierung von Businesslogik zu lösen.
+Die BCF Library stellt Funktionalität zur Entwicklung von Objektmodellen mit:
+-	Relationalen Verknüpfungen zwischen den Tabellen
+-	berechneten Spalten und Validierungsnachrichten
+-	transaktionaler Verarbeitung der Datenänderungen
+-	„Rückgängig“- und „Wiederherstellen“-Funktion
+-	Datenänderungsbenachrichtigung
+bereit. 
+Der BCF Editor ist ein Programm mit grafischer Benutzeroberfläche zum Zusammenstellen der auf der BCF Library basierenden Objektmodelle.
+III.
+Die Software selbst und der Quellcode sind nicht Gegenstand dieser Vereinbarung.
+Der Lizenznehmer erhält ein elektronisch gespeichertes Exemplar der Software sowie eine Lizenz, die ihn zu einer Nutzung entsprechend dieses Vertrages berechtigt. Zusätzlich erhält der Lizenznehmer ein Exemplar dieser Lizenzbestimmungen.
+
+§2 Zustandekommen des Vertrages
+Der Softwarelizenzvertrag bezüglich des Lizenzgegenstandes kommt konkludent durch das Herunterladen der Kopie des Lizenzgegenstandes oder Erhalt des Lizenzgegenstandes von einem Dritten zustande.
+
+§3 Rechtseinräumung
+I.
+Der Lizenzgeber räumt dem Lizenznehmer das einfache, zeitlich und räumlich unbeschränkte Nutzungsrecht am Lizenzgegenstand ein. Der Lizenznehmer ist berechtigt, den Lizenzgegenstand nicht kommerziell zu verwenden. Der Lizenznehmer darf eine beliebige Anzahl von Kopien erstellen. Auf den erstellten Kopien hat er den Vermerk „Kopie“ sowie einen Urheberrechtsvermerk des Lizenzgebers sichtbar anzubringen.
+Er darf eine Sicherheitskopie der ihm überlassenen Kopien des Lizenzgegenstandes erstellen. Dabei hat er auf der erstellten Sicherungskopie den Vermerk „Sicherungskopie“ sowie einen Urheberrechtsvermerk des Lizenzgebers sichtbar anzubringen.
+II.
+Das Nutzungsrecht ist beschränkt auf die Installation des Lizenzgegenstandes auf einer beliebigen Vielzahl von Einzelplatzrechnern und die Verwendung. Diese Rechtsübertragung bezieht sich nicht auf den Quellcode des Lizenzgegenstands.
+Der Lizenznehmer ist zur Dekompilierung der Software nur gemäß §69e UrhG berechtigt.
+III.
+Der Lizenznehmer darf den Lizenzgegenstand nicht bearbeiten, verarbeiten aber er darf ihn öffentlich zugänglich machen, sofern dies in nicht kommerzieller Weise erfolgt. Bei Weitergabe des Lizenzgegenstandes an Dritte hat der Lizenznehmer immer eine unveränderte Kopie dieser Lizenzbestimmungen an den Dritten weiterzugeben. 
+Des Weiteren ist der Lizenznehmer berechtigt, die ihm eingeräumten Nutzungsrechte an Dritte abzutreten, zu übertragen oder Unterlizenzen einzuräumen. Kopien des Lizenzgegenstandes dürfen selbstständig oder in Ihr eigenes Produkt eingebunden weitergegeben werden, sofern die Weitergabe in nicht kommerzieller Weise erfolgt.
+IV.
+Das Recht zur Nutzung der Software umfasst keine weiteren Leistungen.
+
+§4 Lizenzgebühr
+Für die Einräumung der oben genannten Nutzungsrechte wird keine Lizenzgebühr erhoben.
+
+§5 Vertragsdauer und Kündigung
+I.
+Der Vertrag wird auf unbestimmte Zeit geschlossen. Der Vertrag gilt als beendet, wenn der Lizenznehmer den Lizenzgegenstand endgültig deinstalliert und sämtliche, ihm überlassene Kopien an den Lizenzgeber herausgibt oder endgültig und unwiderruflich zerstört.
+II.
+Das Recht, den Vertrag aus wichtigem Grund fristlos zu kündigen, bleibt durch die Bestimmung in Absatz 1 unberührt. Ein wichtiger Grund liegt insbesondere vor, wenn der Lizenznehmer Nutzungsrechte des Lizenzgebers dadurch verletzt, dass er die Software über das nach diesem Vertrag gestattete Maß hinaus nutzt.
+III.
+Im Falle einer Kündigung hat der Lizenznehmer die Software zu deinstallieren und die überlassene sowie die erstellten Sicherheitskopien an den Lizenzgeber herauszugeben. Auf Verlangen des Lizenzgebers ist ein Nachweis über die vollständige Zerstörung der Kopien der Software zu erbringen.
+
+§6 Änderungen und Aktualisierungen
+I.
+Der Lizenzgeber ist berechtigt, Aktualisierungen der Software (Updates) zu erstellen. Eine Verpflichtung hierzu besteht jedoch nicht.
+Der Lizenzgeber behält sich vor, die Pflege der Software nach eigenem Ermessen einzustellen.
+
+§7 Gewährleistung
+I.
+Der Lizenzgeber gewährleistet, dass die Software hinsichtlich ihrer Funktionen im Wesentlichen der Programmbeschreibung §1 II entspricht. 
+II.
+Offensichtliche Mängel hat der Lizenznehmer unverzüglich, (spätestens jedoch zwei Wochen nach Lieferung) anzuzeigen. Sonstige Mängel sind unverzüglich nach deren Entdeckung anzuzeigen. Die Mängelanzeige hat in Textform zu erfolgen. Der Anzeige ist eine nachvollziehbare Beschreibung des Mangels beizufügen.
+III.
+Der Lizenzgeber wird auftretende Sach- und Rechtsmängel am Lizenzgegenstand in angemessener Zeit beseitigen.
+IV.
+Eine Gewährleistung zur Eignung des Lizenzgegenstands für die Zwecke des Lizenznehmers und für die Kompatibilität der Software mit der beim Lizenznehmer vorhandenen Software ist ausgeschlossen.
+V.
+Die Lieferung von Handbüchern und weiterem Begleitmaterial über die Dokumentation der Software hinaus ist nur geschuldet, wenn dies ausdrücklich schriftlich vereinbart wird. Die Lieferung der Dokumentation erfolgt in englischer Sprache, es sei denn, dass ausdrücklich etwas Abweichendes zwischen den Parteien vereinbart worden ist.
+
+§8 Haftung
+Der Lizenzgeber haftet gegenüber dem Lizenznehmer für Schäden für vorsätzlich oder grob fahrlässiges Verhalten. Eine weitergehende Haftung ist ausgeschlossen. Die Beschränkung der Haftung gilt nicht bei Tod, einer Verletzung des Körpers oder der Gesundheit infolge der Handlungen des Lizenzgebers.
+
+§9 Sonstige Bestimmungen
+I.
+Gegen Ansprüche des Lizenzgebers darf der Lizenznehmer nur mit unbestrittenen oder rechtskräftig festgestellten Ansprüchen aufrechnen.
+II.
+Allgemeine Geschäftsbedingungen des Lizenznehmers finden keine Anwendung
+III.
+Diese Vereinbarung unterliegt ausschließlich dem deutschen Recht unter Ausschluss der Anwendung des Übereinkommens der Vereinten Nationen über Verträge über den internationalen Warenverkauf vom 11.4.1980, in Kraft getreten am 01.01.1988.
+IV.
+Ausschließlicher Gerichtsstand ist Erfurt (Deutschland).
+V.
+Sollten einzelne Bestimmungen dieses Vertrages unwirksam oder undurchführbar sein oder nach Vertragsschluss unwirksam oder undurchführbar werden, bleibt davon die Wirksamkeit des Vertrages im Übrigen unberührt. An die Stelle der unwirksamen oder undurchführbaren Bestimmung soll diejenige wirksame und durchführbare Regelung treten, deren Wirkungen der wirtschaftlichen Zielsetzung am nächsten kommen, die die Vertragsparteien mit der unwirksamen bzw. undurchführbaren Bestimmung verfolgt haben. Die vorstehenden Bestimmungen gelten entsprechend für den Fall, dass sich der Vertrag als lückenhaft erweist.
+VI.
+Mündliche oder schriftliche Nebenabreden zu dieser Vereinbarung wurden nicht getroffen.
+VII.
+Abänderungen dieser Vereinbarung oder die Vereinbarung von Nebenabreden der Parteien unterliegen dem Schriftformerfordernis. Dies gilt auch für das Schriftformerfordernis selbst.
+
+Stand: 28.07.2014
+
+
+
+Translation
+
+"CalculationWorks BCF NonCommercial Edition" License Terms
+(CalculationWorks NonCommercial License v 1.1)
+
+Between
+
+Hermann Jung, Viktor-Scheffel-Str.2, 99096 Erfurt, Germany
+Hereinafter "Licensor"
+and
+
+You, as individual or organization on whose behalf you are acting, who downloaded the "CalculationWorks BCF NonCommercial Edition" or acquired the Licensed Object via transmission from a third party.
+
+Hereinafter "Licensee"
+
+Preamble
+
+This agreement governs the rights and obligations between Licensee and Licensor with respect to the Licensed Object "CalculationWorks BCF NonCommercial Edition".
+Licensor's General Terms and Condition of Business are an integral component of this agreement.
+
+§1 Subject matter of the Agreement
+I.
+The subject matter of the agreement is the granting of use rights and permanent transfer of the product developed by Licensor under the name "CalculationWorks BCF NonCommercial Edition" (hereinafter "Licensed Object" or "Software") in its version 1.0, consisting of:
+- BCF Library
+- BCF Editor.
+II.
+The Licensed Object is a collection of components and tools designed to solve complex, recurring problems associated with implementing business logic.
+The BCF Library provides functionality for developing object models with:
+- Relational links between tables
+- Calculated columns and validation messages
+- Transactional processing of data changes
+- "Undo" and "redo" function
+- Data change notification
+. 
+The BCF Editor is a program that features a graphical user interface and serves to compile the object models based on the BCF Library.
+III.
+Neither the Software itself nor its source code is the subject matter of this Agreement.
+Licensee shall receive an electronically saved copy of the Software, as well as a license which entitles him/her to use the Software in accordance with this Agreement. Licensee shall also receive a copy of these License Terms.
+
+§2 Formation of the Agreement
+The Software License Agreement, with respect to the Licensed Object, shall become effective implicitly at the time a copy of the Licensed Object is downloaded or the Licensed Object is received from a third party.
+
+§3 Granting of Rights
+I.
+Licensor shall grant Licensee basic right of use of the Licensed Object. This right of use shall be unlimited in time and have limited territorial validity. Licensee shall not be entitled to use the Licensed Object for commercial purposes. Licensee may create any number of copies of the Software. Licensee must affix the note "Copy" as well as a Licensor copyright notice to a visible area on the any copies of the Software he/she creates.
+Licensee may make a back-up copy of the copies of the Licensed Object transferred to him/her. Licensee must affix the note "Back-up copy" as well as a Licensor copyright notice to a visible area on the back-up copy he/she creates.
+II.
+The right of use shall be restricted to installation and use of the Licensed Object on any number of single-user workstations. This transfer of rights does not refer to the source code for the Licensed Object.
+Licensee shall be entitled to decompile the software only in accordance with Section 69e of the German Copyright Act (UrhG).
+III.
+Licensee may not edit or otherwise process the Licensed Object. However, Licensee may make the Licensed Object available to the public, provided this is not done for commercial purposes. In the event Licensee passes the Licensed Object on to a third party, Licensee must always pass on an unaltered copy of these License Terms to the third party as well. 
+In addition, Licensee shall be entitled to transfer and assign to third parties the use rights granted to him/her, and also to grant sub-licenses. Both separate copies of the Licensed Object as well as those copies integrated into your own products may be passed on to third parties as long as this is not done for commercial purposes.
+IV.
+The right to use the Software shall not include any other products or services.
+
+§4 License Fee
+No license fee shall be paid in order to grant the use rights listed above.
+
+§5 Term of Agreement and Cancellation
+I.
+This Agreement shall be concluded for an indefinite period. The Agreement shall be considered to be terminated if Licensee completely and permanently uninstalls the Licensed Object and returns to Licensor all copies that had been transferred to him/her or destroys these definitively and irreversibly.
+II.
+The right to cancel the contract for good cause and without prior notice shall remain unaffected by the provision in Paragraph 1. Good cause shall be deemed to exist especially if Licensee violates Licensor's use rights by using the Software beyond the degree permitted under this Agreement.
+III.
+In the event of cancellation of the Agreement, Licensee must uninstall the Software and return to Licensor the copies transferred to him/her as well as any back-up copies that were created. Proof that the copies of the Software were destroyed completely must be furnished to Licensor upon Licensor demand.
+
+§6 Changes and Updates
+I.
+Licensor shall be entitled to create updates to the Software. However, it is under no obligation to do so.
+Licensor shall reserve the right, at its discretion, to cease maintenance of the Software.
+
+§7 Warranty
+I.
+Licensor shall guarantee that the Software, in its functions, essentially corresponds to the program description under §1 II. 
+II.
+Licensee must report any obvious defects immediately (but no later than two weeks following delivery). Other defects must be reported immediately after they are discovered. The defect report must be presented in text form. A comprehensible description of the defect must be enclosed with the report.
+III.
+Licensor must correct any material defects or defects of title to the Licensed Object within a reasonable amount of time.
+IV.
+A guarantee of the suitability of the Licensed Object for the purposes of Licensee and for the compatibility of the software with the software available to Licensee shall be excluded.
+V.
+The delivery of manuals and other accompanying materials above and beyond software documentation shall only be owed if expressly arranged in writing. The documentation delivered shall be in English unless alternate arrangements were expressly made by the contractual parties.
+
+§8 Liability
+Licensor shall be liable to Licensee for damages due to intentional or grossly negligent behavior. Any further liability shall be excluded. The limitation of liability shall not apply in the case of death, physical injury or damage to health due to Licensor actions.
+
+§9 Other Provisions
+I.
+Licensee may only offset claims by Licensor with undisputed or legally determined claims.
+II.
+Licensee's general terms and conditions of business shall not apply.
+III.
+This agreement shall be subject exclusively to German law, excluding the application of the United Nations Convention on Contracts for the International Sale of Goods of 11 April 1980, effective 1 January 1988.
+IV.
+The sole place of jurisdiction shall be Erfurt (Germany).
+V.
+Should individual provisions of this Agreement be invalid or unenforceable or become invalid or unenforceable after the Agreement is concluded, this shall not affect the validity of the remaining provisions of the Agreement. The invalid or unenforceable provision shall be replaced by a valid and enforceable provision whose effect comes closest to the economic purpose intended by the contractual parties with the invalid or unenforceable provision. The provisions above apply accordingly should the agreement prove to contain omissions.
+VI.
+No supplementary verbal or written agreements were made for this agreement.
+VII.
+Changes to this agreement or the arrangement of supplementary agreements by the contractual parties shall be subject to the written form requirement. This also applies for the written form requirement itself.
+
+Last update: July 28, 2014
+

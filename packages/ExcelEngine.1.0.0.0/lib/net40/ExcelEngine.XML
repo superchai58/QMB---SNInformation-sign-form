@@ -1,0 +1,253 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ExcelEngine</name>
+    </assembly>
+    <members>
+        <member name="M:ExcelEngine.AsposeCell.RowHasValue(System.Int32)">
+            <summary>
+            判断指定行是否有数据
+            </summary>
+            <param name="row">从1开始，为Excel行序号</param>
+            <returns></returns>
+        </member>
+        <member name="M:ExcelEngine.AsposeCell.GetCellValue(System.Int32,System.Int32)">
+            <summary>
+            根据行列索引得到指定位置的数据
+            </summary>
+            <param name="row">从0开始</param>
+            <param name="column">从0开始</param>
+            <returns></returns>
+        </member>
+        <member name="M:ExcelEngine.AsposeCell.IsMerged(System.Int32,System.Int32)">
+            <summary>
+            判断某位置的单元格是否为合并单元格
+            </summary>
+            <param name="row">从0开始</param>
+            <param name="column">从0开始</param>
+            <returns></returns>
+        </member>
+        <member name="M:ExcelEngine.Config.#ctor(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="excelConfigFullName">配置文件的绝对路径</param>
+        </member>
+        <member name="T:ExcelEngine.Excel">
+            <summary>
+            Excel导入核心类
+            </summary>
+        </member>
+        <member name="M:ExcelEngine.Excel.#ctor">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:ExcelEngine.Excel.#ctor(System.String,System.Boolean)">
+            <summary>
+            
+            </summary>
+            <param name="excelPath"></param>
+            <param name="useTransaction"></param>
+        </member>
+        <member name="M:ExcelEngine.Excel.Import">
+            <summary>
+            导入操作核心方法，负责整个Excel导入
+            </summary>
+        </member>
+        <member name="M:ExcelEngine.Excel.ExcuteImport">
+            <summary>
+            执行Excel导入
+            </summary>
+        </member>
+        <member name="M:ExcelEngine.Excel.IsEnd(ExcelEngine.AsposeCell,System.String,System.Int32)">
+            <summary>
+            根据EndFlag标记判断当前数据行是否结束
+            </summary>
+            <param name="asposeCell"></param>
+            <param name="endFlag"></param>
+            <param name="row"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ExcelEngine.Excel.ColumnExists(ExcelEngine.AsposeCell,System.Int32,System.String)">
+            <summary>
+            根据HeaderText检测Excel中是否存在该列
+            </summary>
+            <param name="asposeCell"></param>
+            <param name="headerIndex"></param>
+            <param name="headerText"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ExcelEngine.Excel.GetColumnIndexByHeaderText(ExcelEngine.AsposeCell,System.Int32,System.String)">
+            <summary>
+            根据HeaderText配置节确定列索引（从0开始）
+            </summary>
+            <param name="asposeCell"></param>
+            <param name="headerIndex"></param>
+            <param name="headerText"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ExcelEngine.Excel.GetDefaultValue(ExcelEngine.AsposeCell,System.String,System.String,System.String)">
+            <summary>
+            根据DefaultValue配置节确定默认值
+            </summary>
+            <param name="asposeCell"></param>
+            <param name="entityName"></param>
+            <param name="columnName"></param>
+            <param name="defaultValue"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ExcelEngine.Excel.GetSqlConditionString(ExcelEngine.AsposeCell,ExcelEngine.Entity,System.Int32,System.Int32)">
+            <summary>
+            得到查询条件sql语句段
+            </summary>
+            <param name="asposeCell"></param>
+            <param name="entity"></param>
+            <param name="headerIndex"></param>
+            <param name="dataIndex"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ExcelEngine.Excel.GetSqlFieldString(ExcelEngine.AsposeCell,ExcelEngine.Entity)">
+            <summary>
+            得到查询字段sql语句段
+            </summary>
+            <param name="asposeCell"></param>
+            <param name="entity"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ExcelEngine.Excel.GetSqlFieldStringAccordingToAlias(ExcelEngine.AsposeCell,System.Int32)">
+            <summary>
+            依据别名得到查询字段sql段
+            </summary>
+            <param name="asposeCell"></param>
+            <param name="headerIndex"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ExcelEngine.Excel.GetSqlFieldStringAccordingToExcludedColumns(ExcelEngine.AsposeCell,ExcelEngine.Entity)">
+            <summary>
+            依据排除列得到查询字段sql语句段
+            </summary>
+            <param name="asposeCell"></param>
+            <param name="entity"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ExcelEngine.Excel.GetSqlFieldValueString(ExcelEngine.AsposeCell,ExcelEngine.Entity,System.Int32,System.Int32)">
+            <summary>
+            得到查询值sql语句段
+            </summary>
+            <param name="asposeCell"></param>
+            <param name="entity"></param>
+            <param name="headerIndex"></param>
+            <param name="dataIndex"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ExcelEngine.Excel.GetSqlFieldValueStringAccordingToAlias(ExcelEngine.AsposeCell,System.Int32,System.Int32)">
+            <summary>
+            得到查询值sql语句段（未配置列情况下使用且有别名）
+            </summary>
+            <param name="asposeCell"></param>
+            <param name="headerIndex"></param>
+            <param name="dataIndex"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ExcelEngine.Excel.GetSqlFieldValueStringWithoutAlias(ExcelEngine.AsposeCell,ExcelEngine.Entity,System.Int32,System.Int32)">
+            <summary>
+            得到查询值sql语句段（未配置列情况下使用且无别名,不管有没有排除字段）
+            </summary>
+            <param name="asposeCell"></param>
+            <param name="headerIndex"></param>
+            <param name="dataIndex"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ExcelEngine.Excel.GetCodeTableValue(ExcelEngine.AsposeCell,ExcelEngine.Property,System.Int32,System.Int32)">
+            <summary>
+            得到代码表的对应值
+            </summary>
+            <param name="asposeCell"></param>
+            <param name="property"></param>
+            <param name="headerIndex"></param>
+            <param name="dataIndex"></param>
+            <returns></returns>
+        </member>
+        <member name="T:ExcelEngine.FileRight">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:ExcelEngine.FileRight.GetAllAccountRight(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="path"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ExcelEngine.FileRight.GetRightByAccount(System.String,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="path"></param>
+            <param name="account"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ExcelEngine.FileRight.SetRight(System.String,System.String,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="path"></param>
+            <param name="userName"></param>
+            <param name="userRight"></param>
+        </member>
+        <member name="M:ExcelEngine.FileSearch.GetFileAndDirectoryInfoByDirectory(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="path"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ExcelEngine.FileSearch.GetFileInfo(System.String,System.String,System.Boolean,System.Boolean)">
+            <summary>
+            
+            </summary>
+            <param name="searchKey"></param>
+            <param name="path"></param>
+            <param name="isVague"></param>
+            <param name="isIgnoreCase"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ExcelEngine.FileSearch.GetFileInfo(System.String,System.String,System.Boolean,System.Boolean,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="searchKey"></param>
+            <param name="path"></param>
+            <param name="isVague"></param>
+            <param name="isIgnoreCase"></param>
+            <param name="account"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ExcelEngine.FileSearch.GetFileInfoAtCurrentDirectory(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="path"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ExcelEngine.FileSearch.GetFileInfoByDirectory(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="path"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ExcelEngine.FileSearch.InitFileInfoList">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:ExcelEngine.FileSearch.FileInfoList">
+            <summary>
+            
+            </summary>
+        </member>
+    </members>
+</doc>
